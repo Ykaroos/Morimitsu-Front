@@ -1,5 +1,10 @@
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./services/routes";
+
 export default function App(){
   return(
-    <div className="bg-red-500">Home</div>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
 }
