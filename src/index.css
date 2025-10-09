@@ -1,1 +1,9 @@
+@font-face {
+    font-family: Arimo;
+    src: url("../src/assets/fonts/Arimo-Regular.ttf");
+}
+@theme{
+    --font-arimo: arimo, "sans-serif";
+}
+
 @import "tailwindcss";
