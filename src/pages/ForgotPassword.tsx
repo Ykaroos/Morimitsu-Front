@@ -1,13 +1,18 @@
 import Logo from "../assets/Logo.png";
 import Background from "../assets/Background.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function ForgotPassword() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleSendCode = () => {
+    setShowModal(true);
+  };
   return (
     <div
       className="w-screen h-screen bg-cover bg-no-repeat bg-center flex items-center justify-center"
-      style={{ backgroundImage: `url(${Background})` }}
-    >
+      style={{ backgroundImage: `url(${Background})` }}>
       <div className="bg-black/80 w-screen h-screen flex items-center justify-center p-5">
         {/* Container principal */}
         <div className="flex flex-col md:flex-row bg-[#191A1C] rounded-[15px] items-center justify-center w-full md:w-[1100px] h-[450px] md:h-[580px] p-5 md:p-0">
@@ -28,7 +33,7 @@ export default function ForgotPassword() {
             <input
               type="text"
               placeholder="Email"
-              className="w-full md:w-[550px] h-[45px] md:h-[60px] rounded-[15px] text-base md:text-lg font-arimo text-[#222529] bg-[#6D6D6E] p-4 md:p-4 mb-20 md:mb-10"
+              className="w-full md:w-[550px] h-[45px] md:h-[60px] rounded-[15px] text-base md:text-lg font-arimo  text-[#191A1C] bg-[#6D6D6E] focus:outline-none focus:ring-2 focus:ring-[#6D6D6E] p-4 md:p-4 mb-20 md:mb-10"
             />
 
             {/* Botões */}
@@ -43,13 +48,33 @@ export default function ForgotPassword() {
               </Link>
 
               {/* Botão Enviar código */}
-              <Link to="/" className="w-full md:w-[140px]">
-                <div className="w-[140px] h-[45px] md:h-[50px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
+              <div onClick={handleSendCode}>
+                <div className="w-[150px] h-[45px] md:h-[50px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
                   <p className="text-white text-lg md:text-xl font-arimo">
                     Enviar código
                   </p>
                 </div>
-              </Link>
+              </div>
+
+              {/* Telinha de aviso */}
+              {showModal && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black/40">
+                  <div className="w-[250px] h-[150px] md:w-[400px] md:h-[300px] bg-[#222529] rounded-[15px] flex flex-col items-center justify-center text-center space-y-5">
+
+                    <p className="text-lg font-arimo text-white md:text-2xl">Código enviado!</p>
+
+                    <Link to ="/InsertPin" className="w-full md:w-[100px] flex justify-center">
+                      <div className= "w-[80px] h-[45px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
+                        <p className="text-white text-lg md:text-xl font-arimo">
+                          ok
+                        </p>
+                      </div>
+                    </Link>
+
+                  </div>
+                </div>
+              )}
+
             </div>
           </div>
         </div>
