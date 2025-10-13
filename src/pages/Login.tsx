@@ -47,8 +47,8 @@ export default function Login() {
                   Esqueci a senha?
                 </div>
               </Link>
-
-              <Link to="/">
+              {/* Aqui faz aquela verificação e manda pro correto */}
+              <Link to="/HomeAdm">
                 <div className="w-full md:w-[120px] h-[50px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer mx-auto md:mx-0">
                   <p className="text-white text-lg md:text-xl font-arimo">Entrar</p>
                 </div>

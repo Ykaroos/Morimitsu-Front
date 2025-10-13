@@ -68,7 +68,7 @@ export default function InsertPin() {
                   ref={(el) => {(inputs.current[index] = el)}}
                   onChange={(e) => handleChange(e, index)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
-                  className="w-[45px] h-[60px] md:w-[60px] md:h-[60px] text-center text-[#191A1C] text-xl bg-[#6D6D6E] text-[#222529] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#6D6D6E]"
+                  className="w-[45px] h-[60px] md:w-[60px] md:h-[60px] text-center text-[#191A1C] text-xl bg-[#6D6D6E] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#6D6D6E]"
                 />
               ))}
             </div>
