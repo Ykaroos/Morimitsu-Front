@@ -28,7 +28,7 @@ export default function Login() {
               <AiOutlineUser className="w-[80px] h-[80px]" />
             </div>
 
-            {/* Caixinhas de informações */}
+            {/* Caixinhas de Login e Senha */}
             <input
               type="text"
               placeholder="Email"
@@ -40,7 +40,7 @@ export default function Login() {
               className="w-full md:w-[550px] h-[45px] md:h-[60px] rounded-[15px] text-lg font-arimo text-[#222529] bg-[#6D6D6E] focus:outline-none focus:ring-2 focus:ring-[#6D6D6E] p-4"
             />
 
-            {/* Esqueceu a senha e botão */}
+            {/* Esqueceu a senha e botão de entrar */}
             <div className="flex flex-col md:flex-row justify-between w-full md:w-[550px] mt-2 space-y-3 md:space-y-0">
               <Link to="/ForgotPassword">
                 <div className="text-[#6D6D6E] font-arimo text-center md:text-left cursor-pointer">

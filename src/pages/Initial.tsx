@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Initial() {
   return (
-    <div
-      className="w-screen h-screen bg-cover bg-no-repeat bg-center"
+    <div className="w-screen h-screen bg-cover bg-no-repeat bg-center"
       style={{ backgroundImage: `url(${Background})` }}>
       {/* Container principal */}
       <div className="flex flex-col md:flex-row bg-black/80 w-screen h-screen">
@@ -19,7 +18,7 @@ export default function Initial() {
           />
         </div>
 
-        {/* Texto e botão */}
+        {/* Texto e botão de entrar */}
         <div className="w-full md:w-1/2 h-1/5 md:h-full flex items-center justify-center md:justify-start md:ml-10">
           <div className="text-center md:text-center">
             <p className="text-white text-3xl md:text-5xl font-arimo">

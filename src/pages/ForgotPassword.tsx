@@ -10,8 +10,7 @@ export default function ForgotPassword() {
     setShowModal(true);
   };
   return (
-    <div
-      className="w-screen h-screen bg-cover bg-no-repeat bg-center flex items-center justify-center"
+    <div className="w-screen h-screen bg-cover bg-no-repeat bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(${Background})` }}>
       <div className="bg-black/80 w-screen h-screen flex items-center justify-center p-5">
         {/* Container principal */}

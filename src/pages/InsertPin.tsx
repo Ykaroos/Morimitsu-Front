@@ -73,7 +73,7 @@ export default function InsertPin() {
               ))}
             </div>
 
-            {/* Botão */}
+            {/* Botão onde para verificar o codigo */}
             <div className="flex justify-center w-full">
               <Link to="/ForgotPassword" className="w-[200px]">
                 <div className="w-full md:w-[180px] h-[45px] md:h-[50px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
