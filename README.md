@@ -1,5 +1,5 @@
 
-## 🚀 Como rodar o projeto
+## Como rodar o projeto
 
 Siga os passos abaixo para executar o projeto localmente:
 
@@ -9,7 +9,7 @@ Siga os passos abaixo para executar o projeto localmente:
 
 2.Instale as dependencias:
 ```bash
-bpm install
+npm install
 ```
 
 3.Rode o projeto:
