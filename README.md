@@ -3,8 +3,6 @@
 
 Siga os passos abaixo para executar o projeto localmente:
 
-### Como Rodar o projeto
-
 1.Baixe e abra o projeto no terminal
 
 2.Instale as dependencias:
