@@ -1,10 +1,11 @@
 import { MdClass } from "react-icons/md";
 import { PiStudentFill } from "react-icons/pi";
 import { IoSchoolSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 export default function HomeAdm() {
   return (
-    <div className="w-full h-auto md:h-screen bg-black flex flex-col md:flex-row overflow-y-auto mb-[80px] md:mb-0 overflow-x-hidden">
+    <div className="w-full h-auto md:h-screen bg-black flex flex-col md:flex-row overflow-y-auto mb-[70px] md:mb-0 overflow-x-hidden">
       {/* Div do meio rolável */}
       <div className="w-screen md:w-2/3 md:h-screen md:overflow-y-auto scrollbar-hide px-5 md:px-10 md:overflow-x-hidden space-y-5">
         {/* Primeira caixa, turmas e notificações */}
@@ -21,33 +22,44 @@ export default function HomeAdm() {
         </div>
 
         {/* Segunda caixa, botões de turmas, alunos e monitores; respectivamente */}
-        <div className="w-full h-auto md:h-[350px] bg-[#191A1C] md:m-4 rounded-[10px] p-3 flex flex-col md:flex-row items-center justify-center space-y-3">
+        <div className="w-full h-auto md:h-[350px] bg-[#191A1C] md:m-4 rounded-[10px] p-3  flex flex-col md:flex-row items-center justify-center space-y-3">
 
           {/* Botão de Turmas */}
-          <div className="flex flex-row-reverse md:flex-col justify-center items-center w-full h-[45px] md:w-[250px] md:h-[280px] bg-[#BA1E22] md:m-3 rounded-[10px] text-white transition-all hover:scale-102 cursor-pointer">
-            <p className="font-arimo text-xl md:text-4xl md:mb-5 ml-1 md:ml-0 mr-6 md:mr-0">Turmas</p>
-            <MdClass className="w-[35px] h-[35px] md:w-[100px] md:h-[100px] "/>
-          </div>
+          <Link to="/ClassAdm" className="w-full h-auto">
+            <div className="flex flex-row-reverse md:flex-col justify-center items-center w-full h-[50px] md:w-[180px] md:h-[280px] bg-[#BA1E22] md:m-3 rounded-[10px] text-white transition-all hover:scale-102 cursor-pointer">
+              <p className="font-arimo text-xl md:text-4xl md:mb-5 ml-1 md:ml-0 mr-6 md:mr-0">Turmas</p>
+              <MdClass className="w-[35px] h-[35px] md:w-[100px] md:h-[100px] "/>
+            </div>
+          </Link>
+          
 
           {/* Botão de Alunos */}
-          <div className="flex flex-row-reverse md:flex-col justify-center items-center w-full h-[45px] md:w-[250px] md:h-[280px] bg-white md:m-3 rounded-[10px] transition-all hover:scale-102 cursor-pointer">
-            <p className="font-arimo text-xl md:text-4xl md:mb-5 mr-8 md:mr-0">Alunos</p>
-            <PiStudentFill className="w-[45px] h-[45px] md:w-[100px] md:h-[100px]"/>
-          </div>
+          <Link to="/StudentsAdm" className="w-full h-auto">
+            <div className="flex flex-row-reverse md:flex-col justify-center items-center w-full h-[50px] md:w-[180px] md:h-[280px] bg-white md:m-3 rounded-[10px] transition-all hover:scale-102 cursor-pointer">
+              <p className="font-arimo text-xl md:text-4xl md:mb-5 mr-8 md:mr-0">Alunos</p>
+              <PiStudentFill className="w-[45px] h-[45px] md:w-[100px] md:h-[100px]"/>
+            </div>
+          </Link>
+          
 
           {/* Botão de Monitores */}
-          <div className="flex flex-row-reverse md:flex-col justify-center items-center w-full h-[45px] md:w-[250px] md:h-[280px] bg-black md:m-3 rounded-[10px] border-1 border-white text-white transition-all hover:scale-102 cursor-pointer">
-            <p className="font-arimo text-xl md:text-4xl md:mb-5 ml-2 md:ml-0">Monitores</p>
-            <IoSchoolSharp className="w-[35px] h-[35px] md:w-[100px] md:h-[100px]"/>
-          </div>
+          <Link to="" className="w-full h-auto">
+            <div className="flex flex-row-reverse md:flex-col justify-center items-center w-full h-[50px] md:w-[180px] md:h-[280px] bg-black md:m-3 rounded-[10px] border-1 border-white text-white transition-all hover:scale-102 cursor-pointer">
+              <p className="font-arimo text-xl md:text-4xl md:mb-5 ml-2 md:ml-0">Monitores</p>
+              <IoSchoolSharp className="w-[35px] h-[35px] md:w-[100px] md:h-[100px]"/>
+            </div>
+          </Link>
+          
         </div>
 
         {/* Terceira caixa, Botão para gerenciar as graduações */}
-        <div className="hidden md:flex justify-center items-center w-full h-auto bg-[#191A1C] m-4 rounded-[10px] p-8">
-          <div className="w-auto h-[80px] bg-[#BA1E22] rounded-[10px] flex items-center justify-center transition-all hover:scale-102 cursor-pointer px-10">
-            <p className="text-white text-3xl font-arimo">Gerenciamento de Graduação</p>
+        <Link to="/ControlGraduationAdm">
+          <div className="hidden md:flex justify-center items-center w-full h-auto bg-[#191A1C] m-4 rounded-[10px] p-8">
+            <div className="w-auto h-[80px] bg-[#BA1E22] rounded-[10px] flex items-center justify-center transition-all hover:scale-102 cursor-pointer px-10">
+              <p className="text-white text-3xl font-arimo">Gerenciamento de Graduação</p>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
 
       {/* Div lateral fixa */}
@@ -72,14 +84,15 @@ export default function HomeAdm() {
       </div>
 
       {/* Botão de gerenciar que só aparece mobile */}
-      <div className="md:hidden flex w-screen p-5">
-        <div className="flex justify-center items-center w-full h-auto bg-[#191A1C] md:m-4 rounded-[10px] p-4">
-          <div className="w-full h-[60px] bg-[#BA1E22] rounded-[10px] flex items-center justify-center transition-all hover:scale-102 cursor-pointer">
-            <p className="text-white text-xl font-arimo">Gerenciamento de Graduação</p>
+      <Link to="/ControlGraduationAdm">
+        <div className="md:hidden flex w-screen p-5">
+          <div className="flex justify-center items-center w-full h-auto bg-[#191A1C] md:m-4 rounded-[10px] p-4">
+            <div className="w-full h-[60px] bg-[#BA1E22] rounded-[10px] flex items-center justify-center transition-all hover:scale-102 cursor-pointer">
+              <p className="text-white text-xl font-arimo">Gerenciamento de Graduação</p>
+            </div>
           </div>
         </div>
-      </div>
-      
+      </Link>
     </div>
   );
 }

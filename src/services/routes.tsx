@@ -8,6 +8,13 @@ import Layout from "../Layouts/Layout";
 import HomeAdm from "../PagesAdm/HomeAdm";
 import ProfileAdm from "../PagesAdm/ProfileAdm";
 import ProfileConfigAdm from "../PagesAdm/ProfileConfigAdm";
+import ClassAdm from "../PagesAdm/ClassAdm";
+import CreateClassAdm from "../PagesAdm/CreateClassAdm";
+import StudentsAdm from "../PagesAdm/StudentsAdm"
+import CreateStudentsAdm from "../PagesAdm/CreateStudentsAdm"
+import WarningsAdm from "../PagesAdm/WarningsAdm";
+import ControlGraduationAdm  from "../PagesAdm/ControlGraduationAdm";
+
 
 export default function AppRoutes () {
   return (
@@ -21,6 +28,14 @@ export default function AppRoutes () {
         <Route path="/HomeAdm" element={<HomeAdm />} />
         <Route path="/ProfileAdm" element={<ProfileAdm />} />
         <Route path="/ProfileConfigAdm" element={<ProfileConfigAdm />} />
+        <Route path="/ClassAdm" element={<ClassAdm />} />
+        <Route path="/CreateClassAdm" element={<CreateClassAdm />} />
+        <Route path="/StudentsAdm" element={<StudentsAdm />} />
+        <Route path="/CreateStudentsAdm" element={<CreateStudentsAdm />} />
+        <Route path="/WarningsAdm" element={<WarningsAdm />} />
+        <Route path="/ControlGraduationAdm" element={<ControlGraduationAdm />} />
+
+
       </Route>
     </Routes>
   );

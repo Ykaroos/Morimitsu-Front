@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function ProfileConfigAdm() {
+export default function CreateClassAdm() {
   const [showModal, setShowModal] = useState(false);
 
   const handleSendCode = () => {
@@ -10,24 +10,24 @@ export default function ProfileConfigAdm() {
   return (
     <div className="w-full h-screen md:h-full bg-black flex justify-center items-center p-5 md:p-0">
       {/* Container principal */}
-      <div className="w-full h-[430px] md:w-[700px] md:h-[380px] bg-[#191A1C] rounded-[10px] flex flex-col justify-between md:justify-center items-center mb-[70px] md:mb-0 ">
+      <div className="w-full h-[430px] md:w-[700px] md:h-[380px] bg-[#191A1C] rounded-[10px] flex flex-col justify-between md:justify-center items-center mb-[80px] md:mb-0 ">
 
         {/* Texto */}
-        <p className="text-white text-2xl md:text-3xl font-arimo mb-0 md:mb-3 mt-8 md:mt-0">Configurações</p>
+        <p className="text-white text-2xl md:text-3xl font-arimo mb-0 md:mb-3 mt-8 md:mt-0">Turma</p>
 
-        {/* Caixas para inserir os dados para alteração */}
+        {/* Caixas para inserir os dados da turma */}
         <div className="w-full md:w-[600px] h-[180px] flex flex-col justify-center items-center p-5 md:p-0">
 
-          {/* Input de Nome */}
+          {/* Input de Nome da turma */}
           <input
             type="text"
-            placeholder="Nome"
+            placeholder="Nome da Turma"
             className="w-full h-[45px] rounded-[10px] text-lg font-arimo text-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] p-4 m-2"
           />
-          {/* Input de Senha */}
+          {/* Input de Monitor */}
           <input
             type="text"
-            placeholder="Senha"
+            placeholder="Monitor"
             className="w-full h-[45px] rounded-[10px] text-lg font-arimo text-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] p-4 m-2"
           />
         </div>
@@ -36,9 +36,9 @@ export default function ProfileConfigAdm() {
         <div className="w-full md:w-[600px] h-[60px] flex flex-row items-center justify-between px-5 md:px-0 mb-8 md:mb-0">
           
           {/* Botão de cancelar */}
-          <Link to="/ProfileAdm">
-            <div className="w-[120px] h-[55px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointerm">
-              <p className="text-white text-xl font-arimo">Cancelar</p>
+          <Link to="/ClassAdm">
+            <div className="w-[120px] h-[55px] bg-white rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
+              <p className="text-black text-xl font-arimo">Cancelar</p>
             </div>
           </Link>
 
@@ -58,7 +58,7 @@ export default function ProfileConfigAdm() {
 
               <p className="text-lg font-arimo text-white md:text-2xl">Alterações salvas!</p>
 
-              <Link to ="/ProfileAdm" className="w-full md:w-[100px] flex justify-center">
+              <Link to ="/ClassAdm" className="w-full md:w-[100px] flex justify-center">
                 <div className= "w-[80px] h-[45px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
                   <p className="text-white text-lg md:text-xl font-arimo">
                     ok
@@ -70,7 +70,6 @@ export default function ProfileConfigAdm() {
           </div>
         )}
       </div>
-      
     </div>
   );
 }
