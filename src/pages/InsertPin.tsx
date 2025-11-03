@@ -22,7 +22,7 @@ export default function InsertPin() {
       e.target.value = "";
     }
   };
-  {/*Aqui é para voltar quando apagar um numerto*/}
+  {/*Aqui é para voltar quando apagar um numero*/}
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>, index: number) => {
     if (e.key === "Backspace" && !e.currentTarget.value && index > 0) {
       inputs.current[index - 1]?.focus();
@@ -37,6 +37,15 @@ export default function InsertPin() {
     }
   }, [pin]);
 
+  const [showModal, setShowModal] = useState(false);
+
+  const handleSendCode = () => {
+    setShowModal(true);
+  };  
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
   return (
     <div className="w-screen h-screen bg-cover bg-no-repeat bg-center flex items-center justify-center"
     style={{ backgroundImage: `url(${Background})` }}>
@@ -68,24 +77,57 @@ export default function InsertPin() {
                   ref={(el) => {(inputs.current[index] = el)}}
                   onChange={(e) => handleChange(e, index)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
-                  className="w-[45px] h-[60px] md:w-[60px] md:h-[60px] text-center text-[#191A1C] text-xl bg-[#6D6D6E] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#6D6D6E]"
+                  className="w-[45px] h-[60px] md:w-[60px] md:h-[60px] text-center text-white text-xl bg-[#6D6D6E] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#6D6D6E]"
                 />
               ))}
             </div>
 
             {/* Botão onde para verificar o codigo */}
             <div className="flex justify-center w-full">
-              <Link to="/ForgotPassword" className="w-[200px]">
+              <div onClick={handleSendCode} className="w-[200px]">
                 <div className="w-full md:w-[180px] h-[45px] md:h-[50px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
                   <p className="text-white text-lg md:text-xl font-arimo">
                     Verificar código
                   </p>
                 </div>
-              </Link>
+              </div>
             </div>
 
           </div>
         </div>
+        {/* Telinha de confirmação */}
+        {showModal && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black/40">
+            <div className="w-[250px] h-[150px] md:w-[400px] md:h-[300px] bg-[#222529] rounded-[15px] flex flex-col items-center justify-center text-center space-y-5 md:space-y-15">
+
+              <p className="text-lg font-arimo text-white md:text-2xl">O PIN foi inserido corretamente?</p>
+              <div className="w-full h-auto flex flex-row justify-between px-3 md:px-10">
+
+              {/* Botão de cancelar */}
+              <div onClick={handleCloseModal} className="w-full md:w-[100px] flex justify-center">
+                <div className="w-[90px] md:w-[120px] h-[45px] bg-white rounded-[10px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
+                  <p className="text-black text-lg md:text-xl font-arimo">
+                    Não
+                  </p>
+                </div>
+              </div>
+
+              {/* Botão de aceitar */}
+              <Link to="/HomeAdm" className="w-full md:w-[100px] flex justify-center" >
+                <div className="w-full md:w-[100px] flex justify-center">
+                  <div className="w-[90px] md:w-[120px] h-[45px] bg-[#BA1E22] rounded-[10px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
+                    <p className="text-white text-lg md:text-xl font-arimo">
+                      Sim
+                    </p>
+                  </div>
+                </div>
+              </Link>
+              
+            </div>
+
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

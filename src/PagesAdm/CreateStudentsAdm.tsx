@@ -24,37 +24,37 @@ export default function CreateStudentsAdm() {
   return (
     <div className="w-full h-screen md:h-full bg-black flex flex-col justify-center items-center mb-[70px] md:mb-0">
       <div className="w-full h-full block overflow-y-auto scrollbar-hide p-5 space-y-3">
-        <div className="w-full h-[450px] md:h-auto bg-[#191A1C] rounded-[10px] flex flex-col justify-center items-center  space-y-4 p-5">
+        <div className="w-full h-auto bg-[#191A1C] rounded-[10px] flex flex-col justify-center items-center  space-y-4 p-5">
           <p className="text-xl text-white font-arimo">Dados Pessoais</p>
           {/* Input de Nome Completo */}
           <input
             type="text"
             placeholder="Nome Completo"
-            className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+            className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
           />
 
           {/* Input de Nome Social */}
           <input
             type="text"
             placeholder="Nome Social*"
-            className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+            className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
           />
 
           {/* Div com os imputs de data de nascimento e Sexo */}
-          <div className="w-full h-auto flex flex-row justify-center items-center space-x-5">
+          <div className="w-full h-auto flex flex-col md:flex-row justify-center items-center md:space-x-5">
             {/* Div com o input de data */}
-            <div className="w-1/2 h-auto ">
+            <div className="w-full md:w-1/2 h-auto ">
               <p className="text-md text-white font-arimo m-1">Data de Nascimento:</p>
               <input
                 type="date"
-                className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3 [color-scheme:dark]"
+                className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3 [color-scheme:dark]"
               />
             </div>
             
             {/* Div com os inputs para selecionar o gênero */}
-            <div className="w-1/2 h-auto ">
+            <div className="w-full md:w-1/2 h-auto ">
               <p className="text-md text-white font-arimo m-1">Sexo:</p>
-              <div className="w-full h-auto flex flex-row justify-between items-center rounded-[5px] bg-[#222529] px-20">
+              <div className="w-full h-auto flex flex-row justify-between items-center rounded-[5px] bg-[#434343]  md:px-20">
 
                 {/* Opção Masculino */}
                 <div className="w-1/2 h-[35px] flex justify-center items-center">
@@ -86,7 +86,7 @@ export default function CreateStudentsAdm() {
           <input
             type="text"
             placeholder="CPF"
-            className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+            className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
           />
 
           <p className="text-xl text-white font-arimo">Meios de Contato (Pessoal)</p>
@@ -95,7 +95,7 @@ export default function CreateStudentsAdm() {
           <input
             type="text"
             placeholder="Email"
-            className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+            className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
           />
           {/* Div com os inputs de telefone (1 e 2) */}
           <div className="w-full h-auto flex flex-row justify-center items-center space-x-5">
@@ -103,13 +103,13 @@ export default function CreateStudentsAdm() {
             <input
               type="text"
               placeholder="Telefone 1"
-              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
             {/* Telefone 2 */}
             <input
               type="text"
               placeholder="Telefone 2"
-              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
           </div>
 
@@ -119,7 +119,7 @@ export default function CreateStudentsAdm() {
           <input
             type="text"
             placeholder="Email"
-            className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+            className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
           />
           {/* Div com os inputs de telefone (1 e 2) */}
           <div className="w-full h-auto flex flex-row justify-center items-center space-x-5">
@@ -127,49 +127,50 @@ export default function CreateStudentsAdm() {
             <input
               type="text"
               placeholder="Telefone 1"
-              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
             {/* Telefone 2 */}
             <input
               type="text"
               placeholder="Telefone 2"
-              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
           </div>
 
         </div>
-        <div className="w-full h-auto flex flex-row justify-content items-center space-x-3">
-          <div className="w-1/2 h-auto bg-[#191A1C] rounded-[10px] flex flex-col justify-center items-center  space-y-4 p-5">
+
+        <div className="w-full h-auto flex flex-col md:flex-row justify-content items-center space-y-3 md:space-y-0 md:space-x-3">
+          <div className="w-full md:w-1/2 h-auto bg-[#191A1C] rounded-[10px] flex flex-col justify-center items-center  space-y-4 p-5">
 
             <p className="text-xl text-white font-arimo m-1">Faixa:</p>
             {/* Input de Cor da Faixa */}
             <input
               type="text"
               placeholder="Email"
-              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
             {/* Input de Grau da faixa */}
             <input
               type="text"
               placeholder="Email"
-              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
           </div>
 
-          <div className="w-1/2 h-auto bg-[#191A1C] rounded-[10px] flex flex-col justify-center items-center  space-y-4 p-5">
+          <div className="w-full md:w-1/2 h-auto bg-[#191A1C] rounded-[10px] flex flex-col justify-center items-center  space-y-4 p-5">
 
             <p className="text-xl text-white font-arimo m-1">Turma:</p>
             {/* Input turma */}
             <input
               type="text"
               placeholder="Email"
-              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
             {/* Input de Frequência */}
             <input
               type="text"
               placeholder="Email"
-              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
           </div>
 
@@ -193,7 +194,7 @@ export default function CreateStudentsAdm() {
         {/* Telinha de confirmação */}
         {showModal && (
           <div className="fixed inset-0 flex items-center justify-center bg-black/40">
-            <div className="w-[250px] h-[150px] md:w-[400px] md:h-[300px] bg-[#222529] rounded-[15px] flex flex-col items-center justify-center text-center space-y-15">
+            <div className="w-[250px] h-[150px] md:w-[400px] md:h-[300px] bg-[#222529] rounded-[15px] flex flex-col items-center justify-center text-center space-y-5 md:space-y-15">
 
               <p className="text-lg font-arimo text-white md:text-2xl">Deseja mesmo criar o aluno?</p>
               <div className="w-full h-auto flex flex-row justify-between px-3 md:px-10">

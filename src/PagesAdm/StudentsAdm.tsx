@@ -9,22 +9,22 @@ export default function StudentsAdm() {
       <div className="w-full h-full bg-[#191A1C] rounded-[10px] flex flex-col">
 
         {/* Div do cabeçalho */}
-        <div className="w-full h-[80px]  flex flex-row justify-between items-center px-5">
+        <div className="w-full h-[80px]  flex flex-row justify-between items-center px-2 md:px-5">
 
           {/*Div para caixa de pesquisa e botão de filtro*/}
-          <div className="w-[300px] h-[50px] flex flex-row justify-center items-center space-x-2">
+          <div className="w-[200px] md:w-[300px] h-[50px] flex flex-row justify-center items-center space-x-2">
 
             {/* Input de pesquisa */}
-            <div className="relative w-[200px]">
+            <div className="relative w-[150px] md:w-[260px]">
               <input
                 type="text"
                 placeholder="Pesquisar..."
-                className="w-full h-[50px] rounded-[10px] text-lg font-arimo text-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] px-3"
+                className="w-full h-[40px] md:h-[50px] rounded-[10px] text-lg font-arimo text-white placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
               />
 
               {/* Ícone de lupa */}
               <AiOutlineSearch
-                className="absolute right-3 top-2 w-[35px] h-[35px] text-white transition-all hover:scale-102 cursor-pointer"
+                className="absolute right-3 top-2 w-[25px] h-[25px] md:w-[35px] md:h-[35px] text-white transition-all hover:scale-102 cursor-pointer"
               />
             </div>
 

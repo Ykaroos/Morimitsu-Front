@@ -32,15 +32,15 @@ export default function ForgotPassword() {
             <input
               type="text"
               placeholder="Email"
-              className="w-full md:w-[550px] h-[45px] md:h-[60px] rounded-[15px] text-base md:text-lg font-arimo  text-[#191A1C] bg-[#6D6D6E] focus:outline-none focus:ring-2 focus:ring-[#6D6D6E] p-4 md:p-4 mb-20 md:mb-10"
+              className="w-full md:w-[550px] h-[45px] md:h-[60px] rounded-[15px] text-base md:text-lg font-arimo  text-white placeholder-white bg-[#6D6D6E] focus:outline-none focus:ring-2 focus:ring-[#6D6D6E] p-4 md:p-4 mb-20 md:mb-10"
             />
 
             {/* Botões */}
             <div className="flex flex-row justify-between items-center w-full md:w-[550px] gap-4 md:gap-0 mb-4 md:mb-0">
               {/* Botão Voltar */}
               <Link to="/Login" className="w-full md:w-[100px]">
-                <div className="w-[80px] h-[45px] md:h-[50px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
-                  <p className="text-white text-lg md:text-xl font-arimo">
+                <div className="w-[80px] h-[45px] md:h-[50px] bg-white rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
+                  <p className="text-black text-lg md:text-xl font-arimo">
                     Voltar
                   </p>
                 </div>

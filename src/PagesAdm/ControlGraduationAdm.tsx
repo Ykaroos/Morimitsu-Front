@@ -30,167 +30,170 @@ export default function ControlGraduationAdm() {
       <div className="w-full h-full block md:mx-15  md:px-3 overflow-y-auto scrollbar-hide space-y-3 py-10">
 
         {/* Div turma kids e baby */}
-        <div className="w-full h-[70px] md:h-[90px] bg-[#191A1C] rounded-[10px] flex justify-between items-center p-2 md:p-4">
+        <div className="w-full h-[70px] bg-[#191A1C] rounded-[10px] flex justify-between items-center p-2 md:p-4">
           {/* Div com texto e indicador  */}
           <div className="flex items-center justify-center space-x-5">
-            <p className="text-white text-lg md:text-3xl font-arimo">Turma Kids e Baby:</p>
-            <div className="bg-[#222529] w-[80px] md:w-[130px] h-[40px] md:h-[60px] rounded-[10px] flex items-center text-xl md:text-2xl text-white justify-center">N°</div>
+            <p className="text-white text-lg md:text-2xl font-arimo">Turma Kids e Baby:</p>
+            <div className="bg-[#222529] w-[80px] md:w-[100px] h-[40px] rounded-[10px] flex items-center text-xl md:text-2xl text-white justify-center">N°</div>
           </div>
           {/* Div com botão para ajuste  */}
-          <div onClick={handleSendCode} className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] bg-[#BA1E22]  rounded-full transition-all hover:scale-105 cursor-pointer">
+          <div onClick={handleSendCode} className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]  bg-[#BA1E22]  rounded-full transition-all hover:scale-105 cursor-pointer">
             <BiPencil className="w-full h-full p-2 md:p-3 text-white"/>
           </div>
         </div>
 
 
         {/* Div turma mista */}
-        <div className="w-full h-[70px] md:h-[90px] bg-[#191A1C] rounded-[10px] flex justify-between items-center p-2 md:p-4">
+        <div className="w-full h-[70px] bg-[#191A1C] rounded-[10px] flex justify-between items-center p-2 md:p-4">
           {/* Div com texto e indicador  */}
           <div className="flex items-center justify-center space-x-5">
-            <p className="text-white text-lg md:text-3xl font-arimo">Turmas Mista:</p>
-            <div className="bg-[#222529] w-[80px] md:w-[130px] h-[40px] md:h-[60px] rounded-[10px] flex items-center text-xl md:text-2xl text-white justify-center">N°</div>
+            <p className="text-white text-lg md:text-2xl font-arimo">Turmas Mista:</p>
+            <div className="bg-[#222529] w-[80px] md:w-[100px] h-[40px] rounded-[10px] flex items-center text-xl md:text-2xl text-white justify-center">N°</div>
           </div>
           {/* Div com botão para ajuste  */}
-          <div onClick={handleSendCode} className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] bg-[#BA1E22] rounded-full transition-all hover:scale-105 cursor-pointer">
+          <div onClick={handleSendCode} className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] bg-[#BA1E22] rounded-full transition-all hover:scale-105 cursor-pointer">
             <BiPencil className="w-full h-full p-2 md:p-3 text-white"/>
           </div>
         </div>
 
 
         {/* Div branco para azul */}
-        <div className="w-full h-[200px] md:h-[300px] bg-[#191A1C] rounded-[10px] flex justify-end items-center p-2 md:p-4 md:space-x-8">
+        <div className="w-full h-[180px] bg-[#191A1C] rounded-[10px] flex justify-end md:justify-between items-center p-2 md:p-4 md:space-x-8">
           {/* Div com as faixas e numero */}
-          <div className="w-[300px] h-[150px]  md:w-[700px] md:h-[250px] flex justify-center items-center p-2">
+          <div className="w-[300px] h-[150px]  md:w-[700px] md:h-[250px] flex justify-center items-center p-2 ml-15">
 
             {/* Primeira faixa */}
             <div className="w-[80px] md:w-[200px] h-full flex flex-col justify-center items-center">
-              <div className="w-[70px] h-[50px] md:w-[190px] md:h-[120px] bg-white rounded-[10px]"></div>
+              <div className="w-[70px] h-[50px] md:w-[150px] md:h-[80px] bg-white rounded-[10px]"></div>
               <p className="text-lg md:text-2xl text-white mt-1 font-arimo">Branco</p>
             </div>
 
             {/* Setas e indicador */}
             <div className="w-[180px] md:w-[300px] h-full flex justify-center items-center space-x-3 md:space-x-8">
-              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-white"/>
-              <div className="bg-[#222529] w-[70px] h-[40px] md:w-[110px] md:h-[60px] rounded-[10px] flex items-center text-lg md:text-2xl text-white justify-center">N°</div>
-              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-white"/>
+              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-white"/>
+              <div className="bg-[#222529] w-[70px] h-[40px] md:w-[100px] md:h-[50px] rounded-[10px] flex items-center text-lg md:text-2xl text-white justify-center">N°</div>
+              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-white"/>
             </div>
 
             {/* Segunda faixa */}
             <div className="w-[80px] md:w-[200px] h-full flex flex-col justify-center items-center">
-              <div className="w-[70px] h-[50px] md:w-[190px] md:h-[120px] bg-[#0000FF] rounded-[10px]"></div>
-              <p className="text-lg md:text-2xl text-white mt-1 font-arimo">Azul</p>
-            </div>
-          </div>
-
-          {/* Div com botão para ajuste  */}
-          <div className="w-auto h-full flex justify-center">
-            <div onClick={handleSendCode} className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] bg-[#BA1E22] rounded-full transition-all hover:scale-105 cursor-pointer">
-              <BiPencil className="w-full h-full p-2 md:p-3 text-white"/>
-            </div>
-          </div>
-        </div>
-
-
-        {/* Div azul para roxo */}
-        <div className="w-full h-[200px] md:h-[300px] bg-[#191A1C] rounded-[10px] flex justify-end items-center p-2 md:p-4 md:space-x-8">
-          {/* Div com as faixas e numero */}
-          <div className="w-[300px] h-[150px]  md:w-[700px] md:h-[250px] flex justify-center items-center p-2">
-
-            {/* Primeira faixa */}
-            <div className="w-[80px] md:w-[200px] h-full flex flex-col justify-center items-center">
-              <div className="w-[70px] h-[50px] md:w-[190px] md:h-[120px] bg-[#0000FF] rounded-[10px]"></div>
+              <div className="w-[70px] h-[50px] md:w-[150px] md:h-[80px] bg-[#0000FF] rounded-[10px]"></div>
               <p className="text-lg md:text-2xl text-white mt-1 font-arimo">Azul</p>
             </div>
 
-            {/* Setas e indicador */}
-            <div className="w-[180px] md:w-[300px] h-full flex justify-center items-center space-x-3 md:space-x-8">
-              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-white"/>
-              <div className="bg-[#222529] w-[70px] h-[40px] md:w-[110px] md:h-[60px] rounded-[10px] flex items-center text-lg md:text-2xl text-white justify-center">N°</div>
-              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-white"/>
-            </div>
-
-            {/* Segunda faixa */}
-            <div className="w-[80px] md:w-[200px] h-full flex flex-col justify-center items-center">
-              <div className="w-[70px] h-[50px] md:w-[190px] md:h-[120px] bg-[#800080] rounded-[10px]"></div>
-              <p className="text-lg md:text-2xl text-white mt-1 font-arimo">Roxo</p>
-            </div>
           </div>
 
           {/* Div com botão para ajuste  */}
           <div className="w-auto h-full flex justify-center">
-            <div onClick={handleSendCode} className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] bg-[#BA1E22] rounded-full transition-all hover:scale-105 cursor-pointer">
+            <div onClick={handleSendCode} className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] bg-[#BA1E22] rounded-full transition-all hover:scale-105 cursor-pointer">
               <BiPencil className="w-full h-full p-2 md:p-3 text-white"/>
             </div>
           </div>
         </div>
 
 
-        {/* Div roxo para marrom */}
-        <div className="w-full h-[200px] md:h-[300px] bg-[#191A1C] rounded-[10px] flex justify-end items-center p-2 md:p-4 md:space-x-8">
+        {/* Div azul para roxo*/}
+        <div className="w-full h-[180px] bg-[#191A1C] rounded-[10px] flex justify-end md:justify-between items-center p-2 md:p-4 md:space-x-8">
           {/* Div com as faixas e numero */}
-          <div className="w-[300px] h-[150px]  md:w-[700px] md:h-[250px] flex justify-center items-center p-2">
+          <div className="w-[300px] h-[150px]  md:w-[700px] md:h-[250px] flex justify-center items-center p-2 ml-15">
 
             {/* Primeira faixa */}
             <div className="w-[80px] md:w-[200px] h-full flex flex-col justify-center items-center">
-              <div className="w-[70px] h-[50px] md:w-[190px] md:h-[120px] bg-[#800080] rounded-[10px]"></div>
-              <p className="text-lg md:text-2xl text-white mt-1 font-arimo">Roxo</p>
+              <div className="w-[70px] h-[50px] md:w-[150px] md:h-[80px] bg-[#0000FF] rounded-[10px]"></div>
+              <p className="text-lg md:text-2xl text-white mt-1 font-arimo">Azul</p>
             </div>
 
             {/* Setas e indicador */}
             <div className="w-[180px] md:w-[300px] h-full flex justify-center items-center space-x-3 md:space-x-8">
-              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-white"/>
-              <div className="bg-[#222529] w-[70px] h-[40px] md:w-[110px] md:h-[60px] rounded-[10px] flex items-center text-lg md:text-2xl text-white justify-center">N°</div>
-              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-white"/>
+              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-white"/>
+              <div className="bg-[#222529] w-[70px] h-[40px] md:w-[100px] md:h-[50px] rounded-[10px] flex items-center text-lg md:text-2xl text-white justify-center">N°</div>
+              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-white"/>
             </div>
 
             {/* Segunda faixa */}
             <div className="w-[80px] md:w-[200px] h-full flex flex-col justify-center items-center">
-              <div className="w-[70px] h-[50px] md:w-[190px] md:h-[120px] bg-[#63300C] rounded-[10px]"></div>
-              <p className="text-lg md:text-2xl text-white mt-1 font-arimo">Marrom</p>
+              <div className="w-[70px] h-[50px] md:w-[150px] md:h-[80px] bg-[#800080] rounded-[10px]"></div>
+              <p className="text-lg md:text-2xl text-white mt-1 font-arimo">Roxo</p>
             </div>
+
           </div>
 
           {/* Div com botão para ajuste  */}
           <div className="w-auto h-full flex justify-center">
-            <div onClick={handleSendCode} className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] bg-[#BA1E22] rounded-full transition-all hover:scale-105 cursor-pointer">
+            <div onClick={handleSendCode} className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] bg-[#BA1E22] rounded-full transition-all hover:scale-105 cursor-pointer">
               <BiPencil className="w-full h-full p-2 md:p-3 text-white"/>
             </div>
           </div>
         </div>
 
-
-        {/* Div marrom para preta */}
-        <div className="w-full h-[200px] md:h-[300px] bg-[#191A1C] rounded-[10px] flex justify-end items-center p-2 md:p-4 md:space-x-8">
+        {/* Div roxo para marrom*/}
+        <div className="w-full h-[180px] bg-[#191A1C] rounded-[10px] flex justify-end md:justify-between items-center p-2 md:p-4 md:space-x-8">
           {/* Div com as faixas e numero */}
-          <div className="w-[300px] h-[150px]  md:w-[700px] md:h-[250px] flex justify-center items-center p-2">
+          <div className="w-[300px] h-[150px]  md:w-[700px] md:h-[250px] flex justify-center items-center p-2 ml-15">
 
             {/* Primeira faixa */}
             <div className="w-[80px] md:w-[200px] h-full flex flex-col justify-center items-center">
-              <div className="w-[70px] h-[50px] md:w-[190px] md:h-[120px] bg-[#63300C] rounded-[10px]"></div>
+              <div className="w-[70px] h-[50px] md:w-[150px] md:h-[80px] bg-[#800080] rounded-[10px]"></div>
+              <p className="text-lg md:text-2xl text-white mt-1 font-arimo">Roxo</p>
+            </div>
+
+            {/* Setas e indicador */}
+            <div className="w-[180px] md:w-[300px] h-full flex justify-center items-center space-x-3 md:space-x-8">
+              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-white"/>
+              <div className="bg-[#222529] w-[70px] h-[40px] md:w-[100px] md:h-[50px] rounded-[10px] flex items-center text-lg md:text-2xl text-white justify-center">N°</div>
+              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-white"/>
+            </div>
+
+            {/* Segunda faixa */}
+            <div className="w-[80px] md:w-[200px] h-full flex flex-col justify-center items-center">
+              <div className="w-[70px] h-[50px] md:w-[150px] md:h-[80px] bg-[#63300C] rounded-[10px]"></div>
+              <p className="text-lg md:text-2xl text-white mt-1 font-arimo">Marrom</p>
+            </div>
+
+          </div>
+
+          {/* Div com botão para ajuste  */}
+          <div className="w-auto h-full flex justify-center">
+            <div onClick={handleSendCode} className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] bg-[#BA1E22] rounded-full transition-all hover:scale-105 cursor-pointer">
+              <BiPencil className="w-full h-full p-2 md:p-3 text-white"/>
+            </div>
+          </div>
+        </div>
+
+        {/* Div marrom para preto*/}
+        <div className="w-full h-[180px] bg-[#191A1C] rounded-[10px] flex justify-end md:justify-between items-center p-2 md:p-4 md:space-x-8">
+          {/* Div com as faixas e numero */}
+          <div className="w-[300px] h-[150px]  md:w-[700px] md:h-[250px] flex justify-center items-center p-2 ml-15">
+
+            {/* Primeira faixa */}
+            <div className="w-[80px] md:w-[200px] h-full flex flex-col justify-center items-center">
+              <div className="w-[70px] h-[50px] md:w-[150px] md:h-[80px] bg-[#63300C] rounded-[10px]"></div>
               <p className="text-lg md:text-2xl text-white mt-1 font-arimo">Marrom</p>
             </div>
 
             {/* Setas e indicador */}
             <div className="w-[180px] md:w-[300px] h-full flex justify-center items-center space-x-3 md:space-x-8">
-              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-white"/>
-              <div className="bg-[#222529] w-[70px] h-[40px] md:w-[110px] md:h-[60px] rounded-[10px] flex items-center text-lg md:text-2xl text-white justify-center">N°</div>
-              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] text-white"/>
+              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-white"/>
+              <div className="bg-[#222529] w-[70px] h-[40px] md:w-[100px] md:h-[50px] rounded-[10px] flex items-center text-lg md:text-2xl text-white justify-center">N°</div>
+              <BiRightArrowAlt className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] text-white"/>
             </div>
 
             {/* Segunda faixa */}
             <div className="w-[80px] md:w-[200px] h-full flex flex-col justify-center items-center">
-              <div className="w-[70px] h-[50px] md:w-[190px] md:h-[120px] bg-black rounded-[10px]"></div>
+              <div className="w-[70px] h-[50px] md:w-[150px] md:h-[80px] bg-black rounded-[10px]"></div>
               <p className="text-lg md:text-2xl text-white mt-1 font-arimo">Preto</p>
             </div>
+
           </div>
 
           {/* Div com botão para ajuste  */}
           <div className="w-auto h-full flex justify-center">
-            <div onClick={handleSendCode} className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] bg-[#BA1E22] rounded-full transition-all hover:scale-105 cursor-pointer">
+            <div onClick={handleSendCode} className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] bg-[#BA1E22] rounded-full transition-all hover:scale-105 cursor-pointer">
               <BiPencil className="w-full h-full p-2 md:p-3 text-white"/>
             </div>
           </div>
         </div>
+        
 
       </div>
 

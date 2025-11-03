@@ -3,10 +3,21 @@ import { useState } from "react";
 
 export default function ProfileConfigAdm() {
   const [showModal, setShowModal] = useState(false);
+  const [showSavedModal, setShowSavedModal] = useState(false);
 
   const handleSendCode = () => {
     setShowModal(true);
   };  
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleSave = () => {
+    setShowModal(false);
+    setShowSavedModal(true);
+  };
+
   return (
     <div className="w-full h-screen md:h-full bg-black flex justify-center items-center p-5 md:p-0">
       {/* Container principal */}
@@ -22,13 +33,13 @@ export default function ProfileConfigAdm() {
           <input
             type="text"
             placeholder="Nome"
-            className="w-full h-[45px] rounded-[10px] text-lg font-arimo text-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] p-4 m-2"
+            className="w-full h-[45px] rounded-[10px] text-lg font-arimo text-white placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] p-4 m-2"
           />
           {/* Input de Senha */}
           <input
-            type="text"
+            type="Password"
             placeholder="Senha"
-            className="w-full h-[45px] rounded-[10px] text-lg font-arimo text-white bg-[#222529] focus:outline-none focus:ring-2 focus:ring-[#222529] p-4 m-2"
+            className="w-full h-[45px] rounded-[10px] text-lg font-arimo text-white placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] p-4 m-2"
           />
         </div>
 
@@ -37,8 +48,8 @@ export default function ProfileConfigAdm() {
           
           {/* Botão de cancelar */}
           <Link to="/ProfileAdm">
-            <div className="w-[120px] h-[55px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointerm">
-              <p className="text-white text-xl font-arimo">Cancelar</p>
+            <div className="w-[120px] h-[55px] bg-white rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
+              <p className="text-black text-xl font-arimo">Cancelar</p>
             </div>
           </Link>
 
@@ -54,15 +65,44 @@ export default function ProfileConfigAdm() {
         {/* Telinha de confirmação */}
         {showModal && (
           <div className="fixed inset-0 flex items-center justify-center bg-black/40">
+            <div className="w-[250px] h-[150px] md:w-[400px] md:h-[300px] bg-[#222529] rounded-[15px] flex flex-col items-center justify-center text-center space-y-8 md:space-y-15">
+
+              <p className="text-lg font-arimo text-white md:text-2xl">Deseja mesmo alterar os dados?</p>
+              <div className="w-full h-auto flex flex-row justify-between px-3 md:px-10">
+
+              {/* Botão de cancelar */}
+              <div onClick={handleCloseModal} className="w-full md:w-[100px] flex justify-center">
+                <div className="w-[90px] md:w-[120px] h-[45px] bg-white rounded-[10px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
+                  <p className="text-black text-lg md:text-xl font-arimo">
+                    Cancelar
+                  </p>
+                </div>
+              </div>
+
+              {/* Botão de aceitar */}
+              <div onClick={handleSave} className="w-full md:w-[100px] flex justify-center">
+                <div className="w-[90px] md:w-[120px] h-[45px] bg-[#BA1E22] rounded-[10px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
+                  <p className="text-white text-lg md:text-xl font-arimo">
+                    Alterar
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            </div>
+          </div>
+        )}
+
+        {/* modal para quando apertar em salvar */}
+        {showSavedModal && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black/40">
             <div className="w-[250px] h-[150px] md:w-[400px] md:h-[300px] bg-[#222529] rounded-[15px] flex flex-col items-center justify-center text-center space-y-5">
 
-              <p className="text-lg font-arimo text-white md:text-2xl">Alterações salvas!</p>
+              <p className="text-lg font-arimo text-white md:text-2xl">Dados Alterados!</p>
 
-              <Link to ="/ProfileAdm" className="w-full md:w-[100px] flex justify-center">
-                <div className= "w-[80px] h-[45px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
-                  <p className="text-white text-lg md:text-xl font-arimo">
-                    ok
-                  </p>
+              <Link to="/ProfileAdm" className="w-full md:w-[100px] flex justify-center">
+                <div className="w-[80px] h-[45px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
+                  <p className="text-white text-lg md:text-xl font-arimo">ok</p>
                 </div>
               </Link>
 
