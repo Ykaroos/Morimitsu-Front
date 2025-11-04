@@ -13,10 +13,10 @@ export default function ClassAdm() {
 
   return (
     <div className="w-full h-full bg-black flex flex-col justify-center items-center">
-      <div className="w-full h-full flex flex-col justify-center items-center p-5 px-12 mb-[70px] md:mb-0">
+      <div className="w-full h-full flex flex-col justify-center items-center p-5 px-5 md:px-12 mb-[70px] md:mb-0">
         
         {/* Caixa Minhas Turmas */}
-        <div className="w-full h-[300px] md:h-1/2 bg-[#191A1C] rounded-[10px] flex flex-col m-2">
+        <div className="w-full h-[320px] md:h-1/2 bg-[#191A1C] rounded-[10px] flex flex-col m-2">
           <div className="w-full h-[65px] flex items-center justify-start px-5">
             <p className="text-3xl text-white font-arimo">Minhas Turmas</p>
           </div>
@@ -30,13 +30,16 @@ export default function ClassAdm() {
                 {turmas.map((turma) => (
                   <div
                     key={turma.id}
-                    className="bg-white w-[240px] h-[150px] rounded-[12px] flex flex-col justify-end items-start shrink-0">
+                    className="bg-white w-[190px] md:w-[240px] h-[150px] rounded-[12px] flex flex-col justify-end items-start shrink-0">
                     <p className="text-black text-xl mx-3 m-1">{turma.nome}</p>
                     <div className="w-full h-[40px] bg-[#A70000] rounded-b-[10px] flex flex-row justify-between items-center px-2">
                       <p className="text-lg text-white">monitor</p>
-                      <div className="w-[30px] h-[30px] bg-white text-black p-1 rounded-full">
-                        <BsThreeDotsVertical className="w-full h-full" />
-                      </div>
+                      <Link to="/EditClassAdm">
+                        <div className="w-[30px] h-[30px] bg-white text-black p-1 rounded-full">
+                          <BsThreeDotsVertical className="w-full h-full" />
+                        </div>
+                      </Link> 
+                      
                     </div>
                   </div>
                 ))}
@@ -46,7 +49,7 @@ export default function ClassAdm() {
         </div>
 
         {/* Caixa Turmas Gerais */}
-        <div className="w-full h-[300px] md:h-1/2 bg-[#191A1C] rounded-[10px] flex flex-col m-2">
+        <div className="w-full h-[320px] md:h-1/2 bg-[#191A1C] rounded-[10px] flex flex-col m-2">
           <div className="w-full h-[75px] flex items-center justify-between px-5">
             <p className="text-3xl text-white font-arimo">Turmas</p>
             <Link to="/CreateClassAdm">
@@ -65,13 +68,16 @@ export default function ClassAdm() {
                 {turmas.map((turma) => (
                   <div
                     key={turma.id}
-                    className="bg-white w-[240px] h-[150px] rounded-[12px] flex flex-col justify-end items-start shrink-0">
+                    className="bg-white w-[190px] md:w-[240px] h-[150px] rounded-[12px] flex flex-col justify-end items-start shrink-0">
                     <p className="text-black text-xl mx-3 m-1">{turma.nome}</p>
                     <div className="w-full h-[40px] bg-[#A70000] rounded-b-[10px] flex flex-row justify-between items-center px-2">
                       <p className="text-lg text-white">monitor</p>
-                      <div className="w-[30px] h-[30px] bg-white text-black p-1 rounded-full">
-                        <BsThreeDotsVertical className="w-full h-full" />
-                      </div>
+                      <Link to="/EditClassAdm">
+                        <div className="w-[30px] h-[30px] bg-white text-black p-1 rounded-full">
+                          <BsThreeDotsVertical className="w-full h-full" />
+                        </div>
+                      </Link>
+                      
                     </div>
                   </div>
                 ))}

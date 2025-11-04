@@ -10,10 +10,14 @@ import ProfileAdm from "../PagesAdm/ProfileAdm";
 import ProfileConfigAdm from "../PagesAdm/ProfileConfigAdm";
 import ClassAdm from "../PagesAdm/ClassAdm";
 import CreateClassAdm from "../PagesAdm/CreateClassAdm";
+import EditClassAdm from "../PagesAdm/EditClassAdm";
 import StudentsAdm from "../PagesAdm/StudentsAdm"
 import CreateStudentsAdm from "../PagesAdm/CreateStudentsAdm"
+import EditStudentsAdm from "../PagesAdm/EditStudentsAdm"
+import SpecificStudentAdm from "../PagesAdm/SpecificStudentAdm";
 import WarningsAdm from "../PagesAdm/WarningsAdm";
 import ControlGraduationAdm  from "../PagesAdm/ControlGraduationAdm";
+
 
 
 export default function AppRoutes () {
@@ -30,8 +34,11 @@ export default function AppRoutes () {
         <Route path="/ProfileConfigAdm" element={<ProfileConfigAdm />} />
         <Route path="/ClassAdm" element={<ClassAdm />} />
         <Route path="/CreateClassAdm" element={<CreateClassAdm />} />
+        <Route path="/EditClassAdm" element={<EditClassAdm />} />
         <Route path="/StudentsAdm" element={<StudentsAdm />} />
         <Route path="/CreateStudentsAdm" element={<CreateStudentsAdm />} />
+        <Route path="/EditStudentsAdm" element={<EditStudentsAdm />} />
+        <Route path="/SpecificStudentAdm" element={<SpecificStudentAdm />} />
         <Route path="/WarningsAdm" element={<WarningsAdm />} />
         <Route path="/ControlGraduationAdm" element={<ControlGraduationAdm />} />
 
