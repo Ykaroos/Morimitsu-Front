@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+{/* Adicionar o tipo da sala */}
 export default function CreateClassAdm() {
   const [showModal, setShowModal] = useState(false);
   const [showSavedModal, setShowSavedModal] = useState(false);

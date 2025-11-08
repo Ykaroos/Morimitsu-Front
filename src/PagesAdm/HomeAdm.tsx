@@ -1,23 +1,58 @@
 import { MdClass } from "react-icons/md";
 import { PiStudentFill } from "react-icons/pi";
 import { IoSchoolSharp } from "react-icons/io5";
+import { BsThreeDotsVertical } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function HomeAdm() {
+
+  const [turmas, setTurmas] = useState<any[]>([]);
+
+  useEffect(() => {
+    const dadosSalvos = JSON.parse(localStorage.getItem("turmas") || "[]");
+    setTurmas(dadosSalvos);
+  }, []);
+
   return (
     <div className="w-full h-auto md:h-screen bg-black flex flex-col md:flex-row overflow-y-auto mb-[70px] md:mb-0 overflow-x-hidden">
       {/* Div do meio rolável */}
       <div className="w-screen md:w-2/3 md:h-screen md:overflow-y-auto scrollbar-hide px-5 md:px-10 md:overflow-x-hidden space-y-5">
         {/* Primeira caixa, turmas e notificações */}
-        <div className="w-full h-[400px] md:h-[530px] bg-[#191A1C] md:m-4 mt-4 rounded-[10px] p-5">
+        <div className="w-full h-auto md:h-[450px] bg-[#191A1C] md:m-4 mt-4 rounded-[10px] p-5">
 
           {/* Caixa com as notificações */}
           <div className="bg-[#141416] w-full h-[80px] md:h-[120px] rounded-[10px]"></div>
 
           {/* Caixa com as turmas */}
-          <div className=" w-full h-[330px] md:mt-8 flex flex-col items-center justify-center p-y-5">
+          <div className=" w-full h-[250px] md:mt-8 flex flex-col items-center justify-center p-y-5">
             <p className="text-white text-2xl font-arimo mb-8">Minhas Turmas</p>
-            <div className="w-full h-[150px] md:h-[200px] bg-blue-500"></div>
+            <div className="w-full h-[220px] overflow-x-auto scrollbar-hide  rounded-b-[10px] px-3">
+              {turmas.length === 0 ? (
+                <p className="text-white text-center mt-5 font-arimo">
+                  Nenhuma turma criada ainda.
+                </p>
+              ) : (
+                <div className="w-max h-full flex flex-row justify-start items-center space-x-3 ">
+                  {turmas.map((turma) => (
+                    <div
+                      key={turma.id}
+                      className="bg-white w-[190px] md:w-[240px] h-[150px] rounded-[12px] flex flex-col justify-end items-start shrink-0">
+                      <p className="text-black text-xl mx-3 m-1">{turma.nome}</p>
+                      <div className="w-full h-[40px] bg-[#A70000] rounded-b-[10px] flex flex-row justify-between items-center px-2">
+                        <p className="text-lg text-white">monitor</p>
+                        <Link to="/EditClassAdm">
+                          <div className="w-[30px] h-[30px] bg-white text-black p-1 rounded-full">
+                            <BsThreeDotsVertical className="w-full h-full" />
+                          </div>
+                        </Link>
+                        
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
 

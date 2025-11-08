@@ -108,7 +108,7 @@ export default function CreateStudentsAdm() {
             {/* Telefone 2 */}
             <input
               type="text"
-              placeholder="Telefone 2"
+              placeholder="Telefone 2*"
               className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
           </div>
@@ -118,7 +118,7 @@ export default function CreateStudentsAdm() {
           {/* Input de Email */}
           <input
             type="text"
-            placeholder="Email"
+            placeholder="Email*"
             className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
           />
           {/* Div com os inputs de telefone (1 e 2) */}
@@ -126,13 +126,13 @@ export default function CreateStudentsAdm() {
             {/* Telefone 1 */}
             <input
               type="text"
-              placeholder="Telefone 1"
+              placeholder="Telefone 1*"
               className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
             {/* Telefone 2 */}
             <input
               type="text"
-              placeholder="Telefone 2"
+              placeholder="Telefone 2*"
               className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
           </div>
@@ -146,13 +146,13 @@ export default function CreateStudentsAdm() {
             {/* Input de Cor da Faixa */}
             <input
               type="text"
-              placeholder="Email"
+              placeholder="Cor"
               className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
             {/* Input de Grau da faixa */}
             <input
               type="text"
-              placeholder="Email"
+              placeholder="Grau"
               className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
           </div>
@@ -163,15 +163,18 @@ export default function CreateStudentsAdm() {
             {/* Input turma */}
             <input
               type="text"
-              placeholder="Email"
+              placeholder="Turma*"
               className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
             {/* Input de Frequência */}
-            <input
-              type="text"
-              placeholder="Email"
-              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
-            />
+            <div className="w-full h-auto flex flex-row justify-center items-center">
+              <p className="text-lg text-white font-arimo mx-2">Frequência:</p>
+              <input
+                type="text"
+                className="w-[100px] h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
+              />
+            </div>
+            
           </div>
 
         </div>

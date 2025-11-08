@@ -146,13 +146,13 @@ export default function EditStudentsAdm() {
             {/* Input de Cor da Faixa */}
             <input
               type="text"
-              placeholder="Email"
+              placeholder="Cor:"
               className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
             {/* Input de Grau da faixa */}
             <input
               type="text"
-              placeholder="Email"
+              placeholder="Grau:"
               className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
           </div>
@@ -163,21 +163,22 @@ export default function EditStudentsAdm() {
             {/* Input turma */}
             <input
               type="text"
-              placeholder="Email"
+              placeholder="Turma:"
               className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
             />
-            {/* Input de Frequência */}
-            <input
-              type="text"
-              placeholder="Email"
-              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
-            />
+            <div className="w-full h-auto flex flex-row justify-center items-center">
+              <p className="text-lg text-white font-arimo mx-2">Frequência:</p>
+              <input
+                type="text"
+                className="w-[100px] h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
+              />
+            </div>
           </div>
 
         </div>
         <div className="w-full h-auto flex flex-row justify-center items-center space-x-30">
           {/* Botão de Cancelar */}
-          <Link to="/StudentsAdm">
+          <Link to="/SpecificStudentAdm">
             <div className="w-[120px] h-[55px] bg-white rounded-[10px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer mx-auto md:mx-0">
               <p className="text-black text-xl font-arimo">Cancelar</p>
             </div>
@@ -196,7 +197,7 @@ export default function EditStudentsAdm() {
           <div className="fixed inset-0 flex items-center justify-center bg-black/40">
             <div className="w-[250px] h-[150px] md:w-[400px] md:h-[300px] bg-[#222529] rounded-[15px] flex flex-col items-center justify-center text-center space-y-5 md:space-y-15">
 
-              <p className="text-lg font-arimo text-white md:text-2xl">Deseja mesmo criar o aluno?</p>
+              <p className="text-lg font-arimo text-white md:text-2xl">Deseja mesmo editar o aluno?</p>
               <div className="w-full h-auto flex flex-row justify-between px-3 md:px-10">
 
               {/* Botão de cancelar */}
@@ -212,7 +213,7 @@ export default function EditStudentsAdm() {
               <div onClick={handleSave} className="w-full md:w-[100px] flex justify-center">
                 <div className="w-[90px] md:w-[120px] h-[45px] bg-[#BA1E22] rounded-[10px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
                   <p className="text-white text-lg md:text-xl font-arimo">
-                    Alterar
+                    Editar
                   </p>
                 </div>
               </div>
@@ -227,7 +228,7 @@ export default function EditStudentsAdm() {
           <div className="fixed inset-0 flex items-center justify-center bg-black/40">
             <div className="w-[250px] h-[150px] md:w-[400px] md:h-[300px] bg-[#222529] rounded-[15px] flex flex-col items-center justify-center text-center space-y-5">
 
-              <p className="text-lg font-arimo text-white md:text-2xl">Alterações salvas!</p>
+              <p className="text-lg font-arimo text-white md:text-2xl">Aluno Editado!</p>
 
               <Link to="/StudentsAdm" className="w-full md:w-[100px] flex justify-center">
                 <div className="w-[80px] h-[45px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
