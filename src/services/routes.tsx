@@ -11,6 +11,7 @@ import ProfileConfigAdm from "../PagesAdm/ProfileConfigAdm";
 import ClassAdm from "../PagesAdm/ClassAdm";
 import CreateClassAdm from "../PagesAdm/CreateClassAdm";
 import EditClassAdm from "../PagesAdm/EditClassAdm";
+import SpecificClassAdm from "../PagesAdm/SpecificClassAdm";
 import StudentsAdm from "../PagesAdm/StudentsAdm"
 import CreateStudentsAdm from "../PagesAdm/CreateStudentsAdm"
 import EditStudentsAdm from "../PagesAdm/EditStudentsAdm"
@@ -35,6 +36,7 @@ export default function AppRoutes () {
         <Route path="/ClassAdm" element={<ClassAdm />} />
         <Route path="/CreateClassAdm" element={<CreateClassAdm />} />
         <Route path="/EditClassAdm" element={<EditClassAdm />} />
+        <Route path="/SpecificClassAdm" element={<SpecificClassAdm />} />
         <Route path="/StudentsAdm" element={<StudentsAdm />} />
         <Route path="/CreateStudentsAdm" element={<CreateStudentsAdm />} />
         <Route path="/EditStudentsAdm" element={<EditStudentsAdm />} />

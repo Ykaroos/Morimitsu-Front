@@ -142,7 +142,7 @@ export default function SpecificStudentAdm() {
 
         <div className="w-full h-auto flex flex-row justify-center items-center space-x-30">
           {/* Botão de Cancelar */}
-          <Link to="/SpecificStudentAdm">
+          <Link to="/StudentsAdm">
             <div className="w-[120px] h-[55px] bg-white rounded-[10px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer mx-auto md:mx-0">
               <p className="text-black text-xl font-arimo">Cancelar</p>
             </div>

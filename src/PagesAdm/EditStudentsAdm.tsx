@@ -89,7 +89,7 @@ export default function EditStudentsAdm() {
             className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
           />
 
-          <p className="text-xl text-white font-arimo">Meios de Contato (Pessoal)</p>
+          <p className="text-xl text-white font-arimo">Contato (Pessoal)</p>
 
           {/* Input de Email */}
           <input
@@ -113,7 +113,7 @@ export default function EditStudentsAdm() {
             />
           </div>
 
-          <p className="text-xl text-white font-arimo">Meios de Contato (Responsável)</p>
+          <p className="text-xl text-white font-arimo">Contato (Responsável)</p>
 
           {/* Input de Email */}
           <input
@@ -139,43 +139,6 @@ export default function EditStudentsAdm() {
 
         </div>
 
-        <div className="w-full h-auto flex flex-col md:flex-row justify-content items-center space-y-3 md:space-y-0 md:space-x-3">
-          <div className="w-full md:w-1/2 h-auto bg-[#191A1C] rounded-[10px] flex flex-col justify-center items-center  space-y-4 p-5">
-
-            <p className="text-xl text-white font-arimo m-1">Faixa:</p>
-            {/* Input de Cor da Faixa */}
-            <input
-              type="text"
-              placeholder="Cor:"
-              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
-            />
-            {/* Input de Grau da faixa */}
-            <input
-              type="text"
-              placeholder="Grau:"
-              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
-            />
-          </div>
-
-          <div className="w-full md:w-1/2 h-auto bg-[#191A1C] rounded-[10px] flex flex-col justify-center items-center  space-y-4 p-5">
-
-            <p className="text-xl text-white font-arimo m-1">Turma:</p>
-            {/* Input turma */}
-            <input
-              type="text"
-              placeholder="Turma:"
-              className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
-            />
-            <div className="w-full h-auto flex flex-row justify-center items-center">
-              <p className="text-lg text-white font-arimo mx-2">Frequência:</p>
-              <input
-                type="text"
-                className="w-[100px] h-[35px] rounded-[5px] text-md font-arimo text-white  placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-3"
-              />
-            </div>
-          </div>
-
-        </div>
         <div className="w-full h-auto flex flex-row justify-center items-center space-x-30">
           {/* Botão de Cancelar */}
           <Link to="/SpecificStudentAdm">
