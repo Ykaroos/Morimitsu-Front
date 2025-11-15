@@ -23,7 +23,7 @@ export default function SpecificStudentAdm() {
     };
 
   return (
-    <div className="w-full h-screen bg-black px-5 flex justify-center mb-[70px] md:mb-0">
+    <div className="w-full h-screen bg-black px-5 flex justify-center mb-[65px] md:mb-0">
       {/* Div scrollável */}
       <div className="w-full h-full block md:mx-15  md:px-3 overflow-y-auto scrollbar-hide space-y-3 py-5">
 
@@ -74,7 +74,7 @@ export default function SpecificStudentAdm() {
             {/* Informações das faixas */}
             <div className="w-full md:w-1/2 h-[165px] bg-[#434343] flex flex-row justify-center items-center rounded-[10px] mt-[17px]">
               {/*representação da faixa*/}
-              <div className="w-1/2 h-full flex justify-center items-center px-4">
+              <div className="w-1/2 h-full flex justify-center items-center px-4 md:px-8">
                 <FaixaAluno faixa="verde-preto" />
               </div> 
               {/*textos da faixa*/}
@@ -90,6 +90,19 @@ export default function SpecificStudentAdm() {
           </div>
 
 
+        </div>
+
+        <div className="w-full h-auto bg-[#191A1C] rounded-[10px] flex flex-col items-center p-2 md:p-4 space-y-3">
+
+          <p className="text-white text-2xl font-arimo" >Frequência</p>
+
+
+          <p className="text-white text-xl font-arimo" >Frequencia por fração</p>
+
+          {/* Div com os inputs de telefone (1 e 2) */}
+          <div className="w-full h-[50px] bg-[#434343] flex flex-row justify-center items-center space-x-5 mx-10">
+            contador percentual
+          </div>
         </div>
 
         <div className="w-full h-auto bg-[#191A1C] rounded-[10px] flex flex-col items-center p-2 md:p-4 space-y-3">

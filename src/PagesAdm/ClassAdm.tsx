@@ -13,7 +13,7 @@ export default function ClassAdm() {
 
   return (
     <div className="w-full h-full bg-black flex flex-col justify-center items-center">
-      <div className="w-full h-full flex flex-col justify-center items-center p-5 px-5 md:px-12 mb-[70px] md:mb-0">
+      <div className="w-full h-full flex flex-col justify-center items-center p-5 px-5 md:px-12 mb-[65px] md:mb-0">
         
         {/* Caixa Minhas Turmas */}
         <div className="w-full h-[320px] md:h-1/2 bg-[#191A1C] rounded-[10px] flex flex-col m-2">

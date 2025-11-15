@@ -10,12 +10,19 @@ export default function HomeAdm() {
   const [turmas, setTurmas] = useState<any[]>([]);
 
   useEffect(() => {
-    const dadosSalvos = JSON.parse(localStorage.getItem("turmas") || "[]");
-    setTurmas(dadosSalvos);
+    const dadosTurmaSalvos = JSON.parse(localStorage.getItem("turmas") || "[]");
+    setTurmas(dadosTurmaSalvos);
   }, []);
 
+      const [alunos, setAlunos] = useState<any[]>([]);
+    
+      useEffect(() => {
+        const dadosAlunosSalvos = JSON.parse(localStorage.getItem("alunos") || "[]");
+        setAlunos(dadosAlunosSalvos);
+      }, []);
+
   return (
-    <div className="w-full h-auto md:h-screen bg-black flex flex-col md:flex-row overflow-y-auto mb-[70px] md:mb-0 overflow-x-hidden">
+    <div className="w-full h-auto md:h-screen bg-black flex flex-col md:flex-row overflow-y-auto mb-[65px] md:mb-0 overflow-x-hidden">
       {/* Div do meio rolável */}
       <div className="w-screen md:w-2/3 md:h-screen md:overflow-y-auto scrollbar-hide px-5 md:px-10 md:overflow-x-hidden space-y-5">
         {/* Primeira caixa, turmas e notificações */}
@@ -81,7 +88,7 @@ export default function HomeAdm() {
           
 
           {/* Botão de Monitores */}
-          <Link to="" className="w-full h-auto px-3">
+          <Link to="/MonitorsAdm" className="w-full h-auto px-3">
             <div className="flex flex-row-reverse md:flex-col justify-center items-center w-full h-[50px] md:h-[280px] bg-black rounded-[10px] border-1 border-white text-white transition-all hover:scale-102 cursor-pointer">
               <p className="font-arimo text-xl md:text-4xl md:mb-5 ml-2 md:ml-0">Monitores</p>
               <IoSchoolSharp className="w-[35px] h-[35px] md:w-[100px] md:h-[100px]"/>
@@ -106,13 +113,63 @@ export default function HomeAdm() {
         {/* Caixa com os aniversáriantes */}
         <div className="bg-[#191A1C] w-full h-auto md:h-[220px] rounded-[10px] m-3 mt-0 flex flex-col items-center justify-center p-5">
           <p className="text-white text-2xl font-arimo">Aniversários</p>
-          <div className="w-full h-[70px] md:h-full bg-yellow-500 mt-3"></div>
+          <div className="w-full h-[70px] flex flex-row md:flex-col md:h-full mt-3 overflow-x-auto md:overflow-x-hidden overflow-y-hidden md:overflow-y-auto scrollbar-hide space-y-1 space-x-2 py-2">
+            {alunos.length === 0 ? (
+              <p className="text-white font-arimo text-lg">
+                Nenhum aluno cadastrado ainda.
+              </p>
+            ) : (
+              alunos.map((aluno, index) => {
+                const dataFormatada = new Date(aluno.dataNascimento).toLocaleDateString(
+                  "pt-BR",
+                  { day: "2-digit", month: "2-digit" }
+                );
+                const primeiroNome = aluno.nomeCompleto.split(" ")[0];
+
+                return (
+                  <div
+                    key={index}
+                    className="w-[220px] md:w-full h-[60px] flex justify-between items-center bg-[#434343] text-white font-arimo text-lg rounded-[10px] p-2 shrink-0"
+                  >
+                    <p className="text-white text-lg md:text-2xl">{primeiroNome}</p>
+                    <p className="text-white text-lg md:text-2xl">{dataFormatada}</p>
+                  </div>
+                );
+              })
+            )}
+
+          </div>
         </div>
 
         {/* Caixa com os graduandos */}
         <div className="bg-[#191A1C] w-full h-auto md:h-[220px] rounded-[10px] m-3  flex flex-col items-center justify-center p-5">
           <p className="text-white text-2xl font-arimo">Graduandos</p>
-          <div className="w-full h-[70px] md:h-full bg-cyan-500 mt-3"></div>
+          <div className="w-full h-[70px] flex flex-row md:flex-col md:h-full mt-3 overflow-x-auto md:overflow-x-hidden overflow-y-hidden md:overflow-y-auto scrollbar-hide space-y-1 space-x-2 py-2">
+            {alunos.length === 0 ? (
+              <p className="text-white font-arimo text-lg">
+                Nenhum aluno cadastrado ainda.
+              </p>
+            ) : (
+              alunos.map((aluno, index) => {
+                const primeiroNome = aluno.nomeCompleto.split(" ")[0]; 
+
+                return (
+                  <div
+                    key={index}
+                    className="w-[220px] md:w-full h-[60px] flex justify-between items-center bg-[#434343] text-white font-arimo text-lg rounded-[10px] p-2 shrink-0"
+                  >
+                    <p className="text-white text-xl md:text-2xl mx-3 m-1">{primeiroNome}</p>
+
+                    <Link to="/SpecificStudentAdm">
+                      <div className="w-[80px] md:w-[90px] h-[40px] bg-[#BA1E22] rounded-[10px] flex justify-center items-center transition-all hover:scale-102 cursor-pointer">
+                        <p className="text-white text-lg md:text-xl font-arimo">Graduar</p>
+                      </div>
+                    </Link>
+                  </div>
+                );
+              })
+            )}
+          </div>
         </div>
 
         {/* Caixa com o grafico de faixas */}

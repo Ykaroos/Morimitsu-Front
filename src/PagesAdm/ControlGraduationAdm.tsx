@@ -25,7 +25,7 @@ export default function ControlGraduationAdm() {
   };
 
   return (
-    <div className="w-full h-screen bg-black px-5 flex justify-center mb-[70px] md:mb-0">
+    <div className="w-full h-screen bg-black px-5 flex justify-center mb-[65px] md:mb-0">
       {/* Div scrollável */}
       <div className="w-full h-full block md:mx-15  md:px-3 overflow-y-auto scrollbar-hide space-y-3 py-10">
 

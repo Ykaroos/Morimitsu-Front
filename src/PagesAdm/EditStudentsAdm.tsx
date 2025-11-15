@@ -22,7 +22,7 @@ export default function EditStudentsAdm() {
 
 
   return (
-    <div className="w-full h-screen md:h-full bg-black flex flex-col justify-center items-center mb-[70px] md:mb-0">
+    <div className="w-full h-screen md:h-full bg-black flex flex-col justify-center items-center mb-[65px] md:mb-0">
       <div className="w-full h-full block overflow-y-auto scrollbar-hide p-5 space-y-3">
         <div className="w-full h-auto bg-[#191A1C] rounded-[10px] flex flex-col justify-center items-center  space-y-4 p-5">
           <p className="text-xl text-white font-arimo">Dados Pessoais</p>

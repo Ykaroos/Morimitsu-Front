@@ -13,8 +13,8 @@ export default function StudentsAdm() {
   }, []);
 
   return (
-    <div className="w-full h-screen md:h-full bg-black p-2 md:p-5 flex justify-center items-center mb-[70px] md:mb-0 overflow-x-hidden md:px-30">
-      <div className="w-full h-full bg-[#191A1C] rounded-[10px] flex flex-col">
+    <div className="w-full h-full bg-black  p-5 flex justify-center items-start md:items-center overflow-x-hidden md:px-30">
+      <div className="w-full h-[660px] md:h-full bg-[#191A1C] rounded-[10px] flex flex-col mb-[65px] md:mb-0 ">
 
         {/* Div do cabeçalho */}
         <div className="w-full h-[80px] flex flex-row justify-between items-center px-2 md:px-5">

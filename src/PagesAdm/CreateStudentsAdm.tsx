@@ -74,7 +74,7 @@ export default function CreateStudentsAdm() {
   };
 
   return (
-    <div className="w-full h-screen md:h-full bg-black flex flex-col justify-center items-center mb-[70px] md:mb-0">
+    <div className="w-full h-screen md:h-full bg-black flex flex-col justify-center items-center mb-[65px] md:mb-0">
       <div className="w-full h-full block overflow-y-auto scrollbar-hide p-5 space-y-3">
         
         {/* Dados do aulo */}
@@ -145,7 +145,7 @@ export default function CreateStudentsAdm() {
             className="w-full h-[35px] rounded-[5px] text-md font-arimo text-white placeholder-white bg-[#434343] px-3"
           />
 
-          <p className="text-xl text-white font-arimo">Meios de Contato (Pessoal)</p>
+          <p className="text-xl text-white font-arimo">Contato (Pessoal)</p>
           <input
             type="text"
             placeholder="Email"
@@ -160,18 +160,18 @@ export default function CreateStudentsAdm() {
               placeholder="Telefone 1"
               value={telefone1}
               onChange={(e) => setTelefone1(e.target.value)}
-              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white bg-[#434343] px-3"
+              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white placeholder-white bg-[#434343] px-3"
             />
             <input
               type="text"
               placeholder="Telefone 2*"
               value={telefone2}
               onChange={(e) => setTelefone2(e.target.value)}
-              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white bg-[#434343] px-3"
+              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white placeholder-white bg-[#434343] px-3"
             />
           </div>
 
-          <p className="text-xl text-white font-arimo">Meios de Contato (Responsável)</p>
+          <p className="text-xl text-white font-arimo">Contato (Responsável)</p>
           <input
             type="text"
             placeholder="Email*"
@@ -185,14 +185,14 @@ export default function CreateStudentsAdm() {
               placeholder="Telefone 1*"
               value={telResp1}
               onChange={(e) => setTelResp1(e.target.value)}
-              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white bg-[#434343] px-3"
+              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white placeholder-white bg-[#434343] px-3"
             />
             <input
               type="text"
               placeholder="Telefone 2*"
               value={telResp2}
               onChange={(e) => setTelResp2(e.target.value)}
-              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white bg-[#434343] px-3"
+              className="w-1/2 h-[35px] rounded-[5px] text-md font-arimo text-white placeholder-white bg-[#434343] px-3"
             />
           </div>
         </div>
@@ -234,9 +234,10 @@ export default function CreateStudentsAdm() {
             >
               <option value="">Selecione o grau</option>
               <option value="grau 0">grau 0</option>
-              <option value="grau 1">grau 0</option>
-              <option value="grau 2">grau 0</option>
-              <option value="grau 3">grau 0</option>
+              <option value="grau 1">grau 1</option>
+              <option value="grau 2">grau 2</option>
+              <option value="grau 3">grau 3</option>
+              <option value="grau 4">grau 4</option>
               
             </select>
           </div>
