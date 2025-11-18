@@ -6,7 +6,7 @@ import { PiStudentFill } from "react-icons/pi";
 import { AiOutlineUser } from "react-icons/ai";
 import { BiSolidBell } from "react-icons/bi";
 
-export default function Menu() {
+export default function MenuAdm() {
   return (
     <div className="fixed bottom-0 w-screen h-[70px] md:w-[250px] md:h-screen  bg-[#4D0000] text-white flex md:flex-col items-center p-2  md:justify-between">
       {/* Logo */}

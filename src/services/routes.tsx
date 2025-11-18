@@ -4,7 +4,8 @@ import Login from "../pages/Login";
 import ForgotPassword from "../pages/ForgotPassword";
 import InsertPin from "../pages/InsertPin";
 
-import Layout from "../Layouts/Layout";
+import LayoutAdm from "../Layouts/LayoutAdm";
+import LayoutMonitor from "../Layouts/LayoutMonitor";
 import HomeAdm from "../PagesAdm/HomeAdm";
 import ProfileAdm from "../PagesAdm/ProfileAdm";
 import ProfileConfigAdm from "../PagesAdm/ProfileConfigAdm";
@@ -30,7 +31,7 @@ export default function AppRoutes () {
       <Route path="/ForgotPassword" element={<ForgotPassword />} />
       <Route path="/InsertPin" element={<InsertPin />} />
 
-      <Route element={<Layout />}>
+      <Route element={<LayoutAdm />}>
         <Route path="/HomeAdm" element={<HomeAdm />} />
         <Route path="/ProfileAdm" element={<ProfileAdm />} />
         <Route path="/ProfileConfigAdm" element={<ProfileConfigAdm />} />
@@ -47,7 +48,9 @@ export default function AppRoutes () {
         <Route path="/WarningsAdm" element={<WarningsAdm />} />
         <Route path="/ControlGraduationAdm" element={<ControlGraduationAdm />} />
         <Route path="/MonitorsAdm" element={<MonitorsAdm />} />
-
+      </Route>
+      
+      <Route element={<LayoutMonitor />}>
 
       </Route>
     </Routes>

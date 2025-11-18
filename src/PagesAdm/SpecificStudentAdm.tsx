@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BiPencil } from "react-icons/bi";
 import { useState } from "react";
 import FaixaAluno from "../components/Faixas"; 
@@ -6,21 +6,22 @@ import FaixaAluno from "../components/Faixas";
 {/* Tenho que configurar o async */}
 export default function SpecificStudentAdm() {
 
-    const [showModal, setShowModal] = useState(false);
-    const [showSavedModal, setShowSavedModal] = useState(false);
-  
-    const handleSendCode = () => {
-      setShowModal(true);
-    };  
-  
-    const handleCloseModal = () => {
-      setShowModal(false);
-    };
-  
-    const handleSave = () => {
-      setShowModal(false);
-      setShowSavedModal(true);
-    };
+  const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+  const [showSavedModal, setShowSavedModal] = useState(false);
+
+  const handleSendCode = () => {
+    setShowModal(true);
+  };  
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleSave = () => {
+    setShowModal(false);
+    setShowSavedModal(true);
+  };
 
   return (
     <div className="w-full h-screen bg-black px-5 flex justify-center mb-[65px] md:mb-0">
@@ -155,11 +156,12 @@ export default function SpecificStudentAdm() {
 
         <div className="w-full h-auto flex flex-row justify-center items-center space-x-30">
           {/* Botão de Cancelar */}
-          <Link to="/StudentsAdm">
+
+          <div onClick={() =>navigate(-1)}>
             <div className="w-[120px] h-[55px] bg-white rounded-[10px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer mx-auto md:mx-0">
               <p className="text-black text-xl font-arimo">Cancelar</p>
             </div>
-          </Link>
+          </div>
 
           {/* Botão de Excluir Aluno */}            
           <div onClick={handleSendCode} >
@@ -207,18 +209,15 @@ export default function SpecificStudentAdm() {
 
               <p className="text-lg font-arimo text-white md:text-2xl">Aluno Excluido!</p>
 
-              <Link to="/StudentsAdm" className="w-full md:w-[100px] flex justify-center">
+              <div onClick={() =>navigate(-1)} className="w-full md:w-[100px] flex justify-center">
                 <div className="w-[80px] h-[45px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
                   <p className="text-white text-lg md:text-xl font-arimo">ok</p>
                 </div>
-              </Link>
-
+              </div>
             </div>
           </div>
         )}
-
         
-
       </div>
     </div>
   );

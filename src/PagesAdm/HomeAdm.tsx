@@ -111,7 +111,7 @@ export default function HomeAdm() {
       <div className="w-screen md:w-1/3 md:h-screen flex flex-col justify-center items-center md:p-3 px-5 md:px-8">
 
         {/* Caixa com os aniversáriantes */}
-        <div className="bg-[#191A1C] w-full h-auto md:h-[220px] rounded-[10px] m-3 mt-0 flex flex-col items-center justify-center p-5">
+        <div className="bg-[#191A1C] w-full h-auto md:h-[200px] rounded-[10px] m-3 mt-0 flex flex-col items-center justify-center p-5">
           <p className="text-white text-2xl font-arimo">Aniversários</p>
           <div className="w-full h-[70px] flex flex-row md:flex-col md:h-full mt-3 overflow-x-auto md:overflow-x-hidden overflow-y-hidden md:overflow-y-auto scrollbar-hide space-y-1 space-x-2 py-2">
             {alunos.length === 0 ? (
@@ -142,7 +142,7 @@ export default function HomeAdm() {
         </div>
 
         {/* Caixa com os graduandos */}
-        <div className="bg-[#191A1C] w-full h-auto md:h-[220px] rounded-[10px] m-3  flex flex-col items-center justify-center p-5">
+        <div className="bg-[#191A1C] w-full h-auto md:h-[200px] rounded-[10px] m-3  flex flex-col items-center justify-center p-5">
           <p className="text-white text-2xl font-arimo">Graduandos</p>
           <div className="w-full h-[70px] flex flex-row md:flex-col md:h-full mt-3 overflow-x-auto md:overflow-x-hidden overflow-y-hidden md:overflow-y-auto scrollbar-hide space-y-1 space-x-2 py-2">
             {alunos.length === 0 ? (

@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function EditStudentsAdm() {
-    
+  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const [showSavedModal, setShowSavedModal] = useState(false);
 
@@ -141,11 +141,11 @@ export default function EditStudentsAdm() {
 
         <div className="w-full h-auto flex flex-row justify-center items-center space-x-30">
           {/* Botão de Cancelar */}
-          <Link to="/SpecificStudentAdm">
+          <div onClick={() =>navigate(-2)}>
             <div className="w-[120px] h-[55px] bg-white rounded-[10px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer mx-auto md:mx-0">
               <p className="text-black text-xl font-arimo">Cancelar</p>
             </div>
-          </Link>
+          </div>
 
           {/* Botão de Editar Aluno */}            
           <div onClick={handleSendCode}>
@@ -193,11 +193,11 @@ export default function EditStudentsAdm() {
 
               <p className="text-lg font-arimo text-white md:text-2xl">Aluno Editado!</p>
 
-              <Link to="/StudentsAdm" className="w-full md:w-[100px] flex justify-center">
+              <div onClick={() =>navigate(-2)} className="w-full md:w-[100px] flex justify-center">
                 <div className="w-[80px] h-[45px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
                   <p className="text-white text-lg md:text-xl font-arimo">ok</p>
                 </div>
-              </Link>
+              </div>
 
             </div>
           </div>

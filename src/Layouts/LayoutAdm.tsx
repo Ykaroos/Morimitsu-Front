@@ -1,11 +1,11 @@
-import Menu from "../components/Menu";
+import MenuAdm from "../components/MenuAdm";
 import { Outlet } from "react-router-dom";
 
-export default function Layout() {
+export default function LayoutAdm() {
   return (
     <div className="flex flex-col md:flex-row">
       {/* Menu lateral (desktop) ou inferior (mobile) */}
-      <Menu />
+      <MenuAdm />
 
       {/* Área principal */}
       <div className="flex-1  md:ml-[250px] md:h-screen min-h-[calc(100vh-80px)] md:min-h-screen overflow-y-auto">

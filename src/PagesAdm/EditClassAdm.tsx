@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function EditClassAdm() {
-  {/* Para a tela de deletar */}
+  const navigate = useNavigate();
+
+  {/* Para a tela de salvar */}
   const [showSaveModal, setShowSaveModal] = useState(false);
   const [showSavedModal, setShowSavedModal] = useState(false);
 
@@ -74,11 +76,10 @@ export default function EditClassAdm() {
           </div>  
           
           {/* Botão de cancelar */}
-          <Link to="/ClassAdm">
-            <div className="w-[90px] md:w-[120px] h-[55px] bg-white rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
-              <p className="text-black text-md md:text-xl font-arimo">Cancelar</p>
-            </div>
-          </Link>
+
+          <div onClick={() =>navigate(-1)} className="w-[90px] md:w-[120px] h-[55px] bg-white rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
+            <p className="text-black text-md md:text-xl font-arimo">Cancelar</p>
+          </div>
 
           {/* Botão de Salvar */}
           <div onClick={handleSendSaveCode}>
@@ -127,13 +128,13 @@ export default function EditClassAdm() {
 
               <p className="text-lg font-arimo text-white md:text-2xl">Alterações salvas!</p>
 
-              <Link to ="/ClassAdm" className="w-full md:w-[100px] flex justify-center">
+              <div onClick={() =>navigate(-1)} className="w-full md:w-[100px] flex justify-center">
                 <div className= "w-[80px] h-[45px] bg-[#BA1E22] rounded-[15px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
                   <p className="text-white text-lg md:text-xl font-arimo">
                     ok
                   </p>
                 </div>
-              </Link>
+              </div>
 
             </div>
           </div>
