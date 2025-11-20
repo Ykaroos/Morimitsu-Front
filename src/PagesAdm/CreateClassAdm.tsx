@@ -1,13 +1,22 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-{/* Adicionar o tipo da sala */}
+import { useState, useEffect } from "react";
+
 export default function CreateClassAdm() {
   const [showModal, setShowModal] = useState(false);
   const [showSavedModal, setShowSavedModal] = useState(false);
   const [className, setClassName] = useState("");
+
   const [monitor, setMonitor] = useState("");
+  const [tipo, setTipo] = useState("");
+
+  const [alunos, setAlunos] = useState<any[]>([]);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const alunosSalvos = JSON.parse(localStorage.getItem("alunos") || "[]");
+    setAlunos(alunosSalvos);
+  }, []);
 
   const handleSendCode = () => {
     if (!className.trim()) {
@@ -25,14 +34,13 @@ export default function CreateClassAdm() {
     const novaTurma: any = {
       id: Date.now(),
       nome: className,
+      tipo: tipo || null,
     };
 
-    
     if (monitor.trim() !== "") {
       novaTurma.monitor = monitor;
     }
 
-    {/* aqui ta salvando */}
     const turmasExistentes = JSON.parse(localStorage.getItem("turmas") || "[]");
     turmasExistentes.push(novaTurma);
     localStorage.setItem("turmas", JSON.stringify(turmasExistentes));
@@ -48,13 +56,13 @@ export default function CreateClassAdm() {
 
   return (
     <div className="w-full h-screen md:h-full bg-black flex justify-center items-center p-5 md:p-0">
-      <div className="w-full h-[430px] md:w-[700px] md:h-[380px] bg-[#191A1C] rounded-[10px] flex flex-col justify-between md:justify-center items-center mb-[65px] md:mb-0 ">
+      <div className="w-full h-[430px] md:w-[700px] md:h-[400px] bg-[#191A1C] rounded-[10px] flex flex-col justify-between md:justify-center items-center mb-[65px] md:mb-0 ">
         <p className="text-white text-2xl md:text-3xl font-arimo mb-0 md:mb-3 mt-8 md:mt-0">
           Turma
         </p>
 
-        <div className="w-full md:w-[600px] h-[180px] flex flex-col justify-center items-center p-5 md:p-0">
-          {/* Nome da Turma */}
+        <div className="w-full md:w-[600px] h-[220px] flex flex-col justify-center items-center p-5 md:p-0">
+
           <input
             type="text"
             placeholder="Nome da Turma"
@@ -63,14 +71,32 @@ export default function CreateClassAdm() {
             className="w-full h-[45px] rounded-[10px] text-lg font-arimo text-white placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] p-4 m-2"
           />
 
-          {/* Monitor (opcional) */}
-          <input
-            type="text"
-            placeholder="Monitor (opcional)"
+          {/* Monitores */}
+          <select
             value={monitor}
             onChange={(e) => setMonitor(e.target.value)}
-            className="w-full h-[45px] rounded-[10px] text-lg font-arimo text-white placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] p-4 m-2"
-          />
+            className="w-full h-[45px] rounded-[10px] text-lg font-arimo text-white placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-4 m-2"
+          >
+            <option value="">Selecione o monitor</option>
+            {alunos.map((aluno: any) => (
+              <option key={aluno.id} value={aluno.nomeCompleto}>
+                {aluno.nomeCompleto}
+              </option>
+            ))}
+          </select>
+
+          {/* Tipo */}
+          <select
+            value={tipo}
+            onChange={(e) => setTipo(e.target.value)}
+            className="w-full h-[45px] rounded-[10px] text-lg font-arimo text-white placeholder-white bg-[#434343] focus:outline-none focus:ring-2 focus:ring-[#434343] px-4 m-2"
+          >
+            <option value="">Selecione o tipo da turma</option>
+            <option value="Normal">Normal</option>
+            <option value="Kids e Baby">Kids e Baby</option>
+            <option value="Mista">Mista</option>
+          </select>
+
         </div>
 
         <div className="w-full md:w-[600px] h-[60px] flex flex-row items-center justify-between px-5 md:px-0 mb-8 md:mb-0">
@@ -87,13 +113,13 @@ export default function CreateClassAdm() {
           </div>
         </div>
 
-        {/* Modal de confirmação */}
         {showModal && (
           <div className="fixed inset-0 flex items-center justify-center bg-black/40">
             <div className="w-[260px] h-[150px] md:w-[400px] md:h-[300px] bg-[#222529] rounded-[15px] flex flex-col items-center justify-center text-center space-y-5 md:space-y-15">
               <p className="text-lg font-arimo text-white md:text-2xl">
                 Deseja mesmo criar a turma?
               </p>
+
               <div className="w-full h-auto flex flex-row justify-between px-3 md:px-10">
                 <div onClick={handleCloseModal} className="w-full md:w-[100px] flex justify-center">
                   <div className="w-[90px] md:w-[120px] h-[45px] bg-white rounded-[10px] flex items-center justify-center transition-all hover:scale-105 cursor-pointer">
@@ -111,7 +137,6 @@ export default function CreateClassAdm() {
           </div>
         )}
 
-        {/* Modal de sucesso */}
         {showSavedModal && (
           <div className="fixed inset-0 flex items-center justify-center bg-black/40">
             <div className="w-[250px] h-[150px] md:w-[400px] md:h-[300px] bg-[#222529] rounded-[15px] flex flex-col items-center justify-center text-center space-y-5">
@@ -122,9 +147,11 @@ export default function CreateClassAdm() {
                   <p className="text-white text-lg md:text-xl font-arimo">Ok</p>
                 </div>
               </div>
+
             </div>
           </div>
         )}
+
       </div>
     </div>
   );

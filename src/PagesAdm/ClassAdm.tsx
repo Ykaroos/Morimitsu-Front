@@ -35,7 +35,7 @@ export default function ClassAdm() {
                       className="bg-white w-[190px] md:w-[240px] h-[150px] rounded-[12px] flex flex-col justify-end items-start shrink-0">
                       <p className="text-black text-xl mx-3 m-1">{turma.nome}</p>
                       <div className="w-full h-[40px] bg-[#A70000] rounded-b-[10px] flex flex-row justify-between items-center px-2">
-                        <p className="text-lg text-white">monitor</p>
+                        <p className="text-lg text-white">{turma.monitor}</p>
 
                         <Link to="/EditClassAdm">
                           <div className="w-[30px] h-[30px] bg-white text-black p-1 rounded-full">

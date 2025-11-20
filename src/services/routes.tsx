@@ -5,7 +5,6 @@ import ForgotPassword from "../pages/ForgotPassword";
 import InsertPin from "../pages/InsertPin";
 
 import LayoutAdm from "../Layouts/LayoutAdm";
-import LayoutMonitor from "../Layouts/LayoutMonitor";
 import HomeAdm from "../PagesAdm/HomeAdm";
 import ProfileAdm from "../PagesAdm/ProfileAdm";
 import ProfileConfigAdm from "../PagesAdm/ProfileConfigAdm";
@@ -22,6 +21,13 @@ import StudentsFromClassAdm from "../PagesAdm/StudentsFromClassAdm"
 import WarningsAdm from "../PagesAdm/WarningsAdm";
 import ControlGraduationAdm  from "../PagesAdm/ControlGraduationAdm";
 import MonitorsAdm from "../PagesAdm/MonitorsAdm";
+
+import LayoutMonitor from "../Layouts/LayoutMonitor";
+import HomeMonitor from "../PagesMonitor/HomeMonitor";
+import StudentsMonitor from "../PagesMonitor/StudentsMonitor";
+import CreateStudentsMonitor from "../PagesMonitor/CreateStudentsMonitor";
+import ProfileMonitor from "../PagesMonitor/ProfileMonitor";
+import ProfileConfigMonitor from "../PagesMonitor/ProfileConfigMonitor";
 
 export default function AppRoutes () {
   return (
@@ -51,7 +57,11 @@ export default function AppRoutes () {
       </Route>
       
       <Route element={<LayoutMonitor />}>
-
+        <Route path="/HomeMonitor" element={<HomeMonitor />} />
+        <Route path="/StudentsMonitor" element={<StudentsMonitor />} />
+        <Route path="/CreateStudentsMonitor" element={<CreateStudentsMonitor />} />
+        <Route path="/ProfileMonitor" element={<ProfileMonitor />} />
+        <Route path="/ProfileConfigMonitor" element={<ProfileConfigMonitor />} />
       </Route>
     </Routes>
   );
