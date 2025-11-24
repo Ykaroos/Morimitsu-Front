@@ -42,7 +42,7 @@ export default function MonitorsAdm() {
   return (
     <div className="w-full h-screen bg-black flex flex-col items-center overflow-hidden">
       {/* Conteúdo scrollável */}
-      <div className="w-full flex-1 overflow-y-auto scrollbar-hide p-5 px-5 md:px-12 mb-[65px] md:mb-0">
+      <div className="w-full flex-1 overflow-y-auto overflow-x-hidden scrollbar-hide p-5 px-5 md:px-12 mb-[65px] md:mb-0">
         {alunos.length === 0 ? (
           <p className="text-white text-center mt-5 font-arimo">
             Nenhum aluno cadastrado ainda.

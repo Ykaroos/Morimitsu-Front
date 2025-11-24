@@ -68,9 +68,6 @@ export default function WarningsAdm() {
     setShowSavedRemoverModal(false);
   };
 
-
-
-
   useEffect(() => {
     const dadosSalvos = JSON.parse(localStorage.getItem("alunos") || "[]");
     setAlunos(dadosSalvos);

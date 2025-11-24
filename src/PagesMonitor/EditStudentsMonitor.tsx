@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-export default function EditStudentsAdm() {
+export default function EditStudentsMonitor() {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const [showSavedModal, setShowSavedModal] = useState(false);

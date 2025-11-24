@@ -9,10 +9,10 @@ export default function SpecificClassAdm() {
 
   const [alunos, setAlunos] = useState<any[]>([]);
   
-    useEffect(() => {
-      const dadosSalvos = JSON.parse(localStorage.getItem("alunos") || "[]");
-      setAlunos(dadosSalvos);
-    }, []);
+  useEffect(() => {
+    const dadosSalvos = JSON.parse(localStorage.getItem("alunos") || "[]");
+    setAlunos(dadosSalvos);
+  }, []);
 
   return (
     <div className="w-full h-auto md:h-screen bg-black flex flex-col md:flex-row overflow-y-auto mb-[65px] md:mb-0 overflow-x-hidden">

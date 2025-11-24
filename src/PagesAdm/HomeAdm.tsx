@@ -14,12 +14,12 @@ export default function HomeAdm() {
     setTurmas(dadosTurmaSalvos);
   }, []);
 
-      const [alunos, setAlunos] = useState<any[]>([]);
-    
-      useEffect(() => {
-        const dadosAlunosSalvos = JSON.parse(localStorage.getItem("alunos") || "[]");
-        setAlunos(dadosAlunosSalvos);
-      }, []);
+  const [alunos, setAlunos] = useState<any[]>([]);
+
+  useEffect(() => {
+    const dadosAlunosSalvos = JSON.parse(localStorage.getItem("alunos") || "[]");
+    setAlunos(dadosAlunosSalvos);
+  }, []);
 
   return (
     <div className="w-full h-auto md:h-screen bg-black flex flex-col md:flex-row overflow-y-auto mb-[65px] md:mb-0 overflow-x-hidden">

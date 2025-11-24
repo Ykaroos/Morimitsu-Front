@@ -28,6 +28,10 @@ import StudentsMonitor from "../PagesMonitor/StudentsMonitor";
 import CreateStudentsMonitor from "../PagesMonitor/CreateStudentsMonitor";
 import ProfileMonitor from "../PagesMonitor/ProfileMonitor";
 import ProfileConfigMonitor from "../PagesMonitor/ProfileConfigMonitor";
+import SpecificStudentMonitor from "../PagesMonitor/SpecificStudentMonitor";
+import EditStudentsMonitor from "../PagesMonitor/EditStudentsMonitor";
+import MonitorsMonitor from "../PagesMonitor/MonitorsMonitor";
+import EditClassMonitor from "../PagesMonitor/EditClassMonitor";
 
 export default function AppRoutes () {
   return (
@@ -59,9 +63,14 @@ export default function AppRoutes () {
       <Route element={<LayoutMonitor />}>
         <Route path="/HomeMonitor" element={<HomeMonitor />} />
         <Route path="/StudentsMonitor" element={<StudentsMonitor />} />
+        <Route path="/SpecificStudentMonitor" element={<SpecificStudentMonitor />} />
         <Route path="/CreateStudentsMonitor" element={<CreateStudentsMonitor />} />
         <Route path="/ProfileMonitor" element={<ProfileMonitor />} />
         <Route path="/ProfileConfigMonitor" element={<ProfileConfigMonitor />} />
+        <Route path="/EditStudentsMonitor" element={<EditStudentsMonitor />} />
+        <Route path="/EditClassMonitor" element={<EditClassMonitor />} />
+        <Route path="/MonitorsMonitor" element={<MonitorsMonitor />} />
+
       </Route>
     </Routes>
   );

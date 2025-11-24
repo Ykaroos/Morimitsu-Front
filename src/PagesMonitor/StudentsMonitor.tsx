@@ -57,7 +57,7 @@ export default function StudentsMonitor() {
                 className="w-full h-[35px] flex justify-between items-center bg-[#434343] text-white font-arimo text-lg rounded-[5px] p-2"
               >
                 <p className="text-white text-md mx-3 m-1">{aluno.nomeCompleto}</p>
-                <Link to="/SpecificStudentAdm">
+                <Link to="/SpecificStudentMonitor">
                   <div className="w-[20px] h-[20px] rounded-full flex justify-center items-center bg-white p-1 text-black transition-all hover:scale-110 cursor-pointer">
                     <AiOutlineInfo className="w-auto h-auto"/>
                   </div>
