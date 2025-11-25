@@ -32,6 +32,11 @@ import SpecificStudentMonitor from "../PagesMonitor/SpecificStudentMonitor";
 import EditStudentsMonitor from "../PagesMonitor/EditStudentsMonitor";
 import MonitorsMonitor from "../PagesMonitor/MonitorsMonitor";
 import EditClassMonitor from "../PagesMonitor/EditClassMonitor";
+import ClassMonitor from "../PagesMonitor/ClassMonitor";
+import SpecificClassMonitor from "../PagesMonitor/SpecificClassMonitor";
+import ClassAttendanceMonitor from "../PagesMonitor/ClassAttendanceMonitor";
+import WarningsMonitor from "../PagesMonitor/WarningsMonitor";
+import StudentsFromClassMonitor from "../PagesMonitor/StudentsFromClassMonitor";
 
 export default function AppRoutes () {
   return (
@@ -63,13 +68,18 @@ export default function AppRoutes () {
       <Route element={<LayoutMonitor />}>
         <Route path="/HomeMonitor" element={<HomeMonitor />} />
         <Route path="/StudentsMonitor" element={<StudentsMonitor />} />
+        <Route path="/ClassMonitor" element={<ClassMonitor />} />
+        <Route path="/ClassAttendanceMonitor" element={<ClassAttendanceMonitor />} />
+        <Route path="/SpecificClassMonitor" element={<SpecificClassMonitor />} />
         <Route path="/SpecificStudentMonitor" element={<SpecificStudentMonitor />} />
         <Route path="/CreateStudentsMonitor" element={<CreateStudentsMonitor />} />
         <Route path="/ProfileMonitor" element={<ProfileMonitor />} />
         <Route path="/ProfileConfigMonitor" element={<ProfileConfigMonitor />} />
+        <Route path="/StudentsFromClassMonitor" element={<StudentsFromClassMonitor />} />
         <Route path="/EditStudentsMonitor" element={<EditStudentsMonitor />} />
         <Route path="/EditClassMonitor" element={<EditClassMonitor />} />
         <Route path="/MonitorsMonitor" element={<MonitorsMonitor />} />
+        <Route path="/WarningsMonitor" element={<WarningsMonitor />} />
 
       </Route>
     </Routes>

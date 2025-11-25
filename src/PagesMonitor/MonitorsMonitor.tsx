@@ -50,7 +50,7 @@ export default function MonitorsMonitor() {
                 <div className="w-full overflow-x-auto scrollbar-hide rounded-[10px] px-1">
                   <div className="w-max flex flex-row justify-start items-center space-x-3">
                     {turmas.map((turma) => (
-                      <Link to="/SpecificClassAdm" key={turma.id}>
+                      <Link to="/SpecificClassMonitor" key={turma.id}>
                         <div className="bg-white w-[190px] md:w-[240px] h-[150px] rounded-[12px] flex flex-col justify-end items-start shrink-0">
                           <p className="text-black text-xl mx-3 m-1">
                             {turma.nome}
@@ -59,7 +59,7 @@ export default function MonitorsMonitor() {
                             <p className="text-lg text-white">
                               {getPrimeiroESegundoNome(aluno.nomeCompleto)}
                             </p>
-                            <Link to="/EditClassAdm">
+                            <Link to="/EditClassMonitor">
                               <div className="w-[30px] h-[30px] bg-white text-black p-1 rounded-full">
                                 <BsThreeDotsVertical className="w-full h-full" />
                               </div>

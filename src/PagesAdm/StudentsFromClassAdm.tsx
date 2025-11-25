@@ -5,7 +5,7 @@ import { AiOutlineSearch, AiOutlineInfo, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-export default function WarningsAdm() {
+export default function StudentsFromClassAdm() {
   const [alunos, setAlunos] = useState<any[]>([]);
   const [modoPromocao, setModoPromocao] = useState(false);
   const [modoAdicionar, setModoAdicionar] = useState(false);
