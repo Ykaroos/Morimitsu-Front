@@ -76,15 +76,14 @@ export default function SpecificStudentMonitor() {
 
         </div>
 
-        <div className="w-full h-auto bg-[#191A1C] rounded-[10px] flex flex-col items-center p-2 md:p-4 space-y-3">
+        <div className="w-full h-auto bg-[#191A1C] rounded-[10px] flex flex-col items-center p-2 md:p-4 space-y-3 md:px-10">
 
           <p className="text-white text-2xl font-arimo" >Frequência</p>
-
 
           <p className="text-white text-xl font-arimo" >Frequencia por fração</p>
 
           {/* Div com os inputs de telefone (1 e 2) */}
-          <div className="w-full h-[50px] bg-[#434343] flex flex-row justify-center items-center space-x-5 mx-10">
+          <div className="w-full h-[45px] bg-white flex flex-row justify-center items-center space-x-5 mx-10 rounded-full">
             contador percentual
           </div>
         </div>

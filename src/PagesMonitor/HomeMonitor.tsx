@@ -2,6 +2,7 @@ import { MdClass } from "react-icons/md";
 import { PiStudentFill } from "react-icons/pi";
 import { IoSchoolSharp } from "react-icons/io5";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { BiSolidBell } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -28,7 +29,24 @@ export default function HomeMonitor() {
         <div className="w-full h-auto md:h-[450px] bg-[#191A1C] md:m-4 mt-4 rounded-[10px] p-5">
 
           {/* Caixa com as notificações */}
-          <div className="bg-[#141416] w-full h-[80px] md:h-[120px] rounded-[10px]"></div>
+          <div className="w-full h-[80px] md:h-[120px] bg-[#141416] rounded-[10px] flex flex-col mb-[65px] md:mb-0 ">
+            <div className="w-full h-full flex flex-col p-3 overflow-y-auto px-5 space-y-1 scrollbar-hide">
+              {alunos.length === 0 ? (
+                <p className="text-white font-arimo text-lg">Nenhum aluno cadastrado ainda.</p>
+              ) : (
+                alunos.map((aluno, index) => (
+                  <div
+                    key={index}
+                    className="w-full h-[55px] flex justify-Start items-center bg-[#434343] text-white font-arimo text-lg rounded-[5px] p-2 shrink-0 space-x-3"
+                  >
+                    <BiSolidBell className="text-[#B90101] w-[40px] h-[40px]" />
+                    <p className="text-white text-md ">{aluno.nomeCompleto} pode subir de grau</p>
+                    
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
 
           {/* Caixa com as turmas */}
           <div className=" w-full h-[250px] md:mt-8 flex flex-col items-center justify-center p-y-5">
